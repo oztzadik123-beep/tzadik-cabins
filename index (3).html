@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title id="pageTitle">בקתות צדיק כתמר | מושב נוב, רמת הגולן</title>
+<meta name="description" id="pageDesc" content=""/>
+<meta property="og:title" id="ogTitle" content=""/>
+<meta property="og:description" id="ogDesc" content=""/>
+<meta property="og:image" id="ogImage" content=""/>
+<meta property="og:type" content="website"/>
+<meta name="theme-color" content="#2d4a2d"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{
+  colors:{
+    forest:{DEFAULT:'#2d4a2d',mid:'#3d6b3d',pale:'#e8f0e8',dark:'#1a2e1a'},
+    wood:{DEFAULT:'#8B5E3C',light:'#c49a6c',pale:'#faf5ee'},
+    cream:{DEFAULT:'#f5ede0',dark:'#ece0cc'},
+    gold:{DEFAULT:'#b8860b',light:'#fdf6e3'},
+  },
+  fontFamily:{sans:['Assistant','sans-serif']},
+}}}
+</script>
+<style>
+html{scroll-behavior:smooth}
+body{
+  font-family:'Assistant',sans-serif;
+  direction:rtl;
+  /* טקסטורת עץ עדינה על רקע קרם */
+  background-color:#f5ede0;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 120px,
+      rgba(139,94,60,.022) 120px,
+      rgba(139,94,60,.022) 121px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      transparent,
+      transparent 80px,
+      rgba(139,94,60,.015) 80px,
+      rgba(139,94,60,.015) 81px
+    ),
+    repeating-linear-gradient(
+      175deg,
+      transparent,
+      transparent 200px,
+      rgba(139,94,60,.012) 200px,
+      rgba(139,94,60,.012) 202px
+    );
+}
+/* Hero */
+.hero-overlay{background:linear-gradient(180deg,rgba(0,0,0,.38)0%,rgba(0,0,0,.08)38%,rgba(0,0,0,.68)100%)}
+.hero-zoom{animation:zoomOut 22s ease-out forwards}
+@keyframes zoomOut{from{transform:scale(1.06)}to{transform:scale(1)}}
+/* Sections with wood texture background */
+.section-white{background-color:#fff;background-image:repeating-linear-gradient(90deg,transparent,transparent 120px,rgba(139,94,60,.018) 120px,rgba(139,94,60,.018) 121px),repeating-linear-gradient(175deg,transparent,transparent 200px,rgba(139,94,60,.01) 200px,rgba(139,94,60,.01) 202px)}
+.section-cream{background-color:#f5ede0;background-image:repeating-linear-gradient(90deg,transparent,transparent 120px,rgba(139,94,60,.022) 120px,rgba(139,94,60,.022) 121px),repeating-linear-gradient(180deg,transparent,transparent 80px,rgba(139,94,60,.015) 80px,rgba(139,94,60,.015) 81px)}
+/* Reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+/* Lightbox */
+#lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:900;align-items:center;justify-content:center}
+#lightbox.open{display:flex}
+#lbImg{max-width:92vw;max-height:88vh;object-fit:contain;border-radius:10px}
+/* FAQ */
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-ans.open{max-height:500px}
+.faq-icon{transition:transform .3s}
+.faq-icon.open{transform:rotate(45deg)}
+/* Gallery scroll */
+.gallery-scroll{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.gallery-scroll::-webkit-scrollbar{display:none}
+.gallery-scroll .g-item{flex:0 0 auto;scroll-snap-align:start;border-radius:14px;overflow:hidden;cursor:pointer}
+/* WA pulse */
+.wa-pulse{animation:pulse 2.8s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}55%{box-shadow:0 0 0 14px rgba(37,211,102,0)}}
+/* עוגיות — לא נדרש באתר זה */
+
+/* Nav */
+#mainNav{transition:background .3s,box-shadow .3s}
+/* Section label */
+.sec-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.13em;color:#3d6b3d;text-transform:uppercase;margin-bottom:12px}
+.sec-label::before{content:'';width:22px;height:2px;background:#3d6b3d;border-radius:2px}
+</style>
+</head>
+<body>
+
+<script>
+/* ════════════════════════════════════════════════════════════════════
+   ██  SITE_CONTENT  — כל תוכן האתר מנוהל כאן בלבד  ██
+   ════════════════════════════════════════════════════════════════════
+   הוראות עריכה:
+   • לשינוי וואטסאפ: שנה contact.whatsapp → 972 + מספרך ללא 0
+   • להוספת שאלה ב-FAQ: העתק { question, answer } לסוף המערך
+   • לשינוי תמונה: שנה שם קובץ (הקובץ חייב להיות בתיקיית photos/)
+   • להוספת תמונה לגלריה: הוסף { src, alt } למערך galleryImages
+   ════════════════════════════════════════════════════════════════════ */
+const SITE_CONTENT = {
+
+  meta: {
+    title:       'בקתות צדיק כתמר | מושב נוב, רמת הגולן',
+    description: 'שתי בקתות עץ יוקרתיות במושב נוב — זוג + עד 7 ילדים, בריכה, ג\'קוזי פרטי, כרם מרלו אורגני ובוסתן.',
+    ogImage:     'photos/13-cabin-golden-hour.jpeg',
+  },
+
+  hero: {
+    eyebrow:  'מושב נוב, רמת הגולן',
+    title:    'בקתות צדיק כתמר',
+    subtitle: 'המקום שלכם בגולן',
+    bgImage:  'photos/13-cabin-golden-hour.jpeg',
+    ctaText:  'בדקו זמינות והזמינו',
+    cta2Text: 'גלו עוד ↓',
+    stats: [
+      { num:'9',    label:'אורחים לכל בקתה'  },
+      { num:'2',    label:'בקתות עץ פרטיות'  },
+      { num:'כ-25\'', label:'מהכנרת'            },
+    ],
+  },
+
+  mainParagraph: 'במושב נוב השקט מחכות לכם שתי בקתות עץ גדולות המיועדות למשפחות (זוג+7). כאן תמצאו שילוב של פרטיות מוחלטת, בריכה מרעננת, ג\'קוזי מפנק ונוף לכרם המרלו האורגני שלנו. אנחנו במרחק נגיעה מעגלות קפה טעימות וייחודיות, מהמעיינות הכי יפים בגולן ורק כ-25 דקות מהכנרת.',
+  vineyardNote:  'ענבי מרלו אורגניים בלבד.',
+
+  /* ── פס תכונות ──────────────────────────────────────────────────
+     להוספת תכונה: { icon:'אמוג\'י', label:'טקסט' }
+  ────────────────────────────────────────────────────────────────── */
+  keyFeatures: [
+    { icon:'👨‍👩‍👧‍👦', label:'זוג + 7 ילדים'         },
+    { icon:'🛁',       label:'ג\'קוזי פרטי בבקתה'   },
+    { icon:'🏊',       label:'בריכה על דק עץ'        },
+    { icon:'🍇',       label:'כרם מרלו אורגני'        },
+    { icon:'🍷',       label:'יין מפנק בכניסה'        },
+    { icon:'☕',       label:'מכונת קפה + ערכת בוקר' },
+    { icon:'🌳',       label:'בוסתן לקטיף עצמי'      },
+    { icon:'🐾',       label:'חיות מחמד — בחוץ'      },
+  ],
+
+  /* ── 3 תמונות ראווה ─────────────────────────────────────────────
+     src — שם קובץ בתיקיית photos/
+     תמונה שנייה תוקנה: הבריכה האמיתית
+  ────────────────────────────────────────────────────────────────── */
+  showcaseImages: [
+    { src:'photos/03-cabin-exterior-pergola.jpeg', alt:'בקתות צדיק כתמר מבחוץ',   label:'הבקתה'  },
+    { src:'photos/06-pool.jpeg',                   alt:'בריכת שחייה על דק עץ',     label:'הבריכה' },
+    { src:'photos/17-garden-swing-tree.jpeg',      alt:'גינה ירוקה עם נדנדה ועץ',  label:'הגינה'  },
+  ],
+
+  /* ── גלריה מלאה ─────────────────────────────────────────────────
+     להוספת תמונה: { src:'photos/שם.jpeg', alt:'תיאור' }
+  ────────────────────────────────────────────────────────────────── */
+  galleryImages: [
+    { src:'photos/01-living-dining.jpeg',          alt:'סלון ופינת אוכל'           },
+    { src:'photos/02-kitchenette.jpeg',             alt:'מטבחון וסלון'              },
+    { src:'photos/03-cabin-exterior-pergola.jpeg',  alt:'חזית הבקתה עם פרגולה'     },
+    { src:'photos/04-loft-mattresses.jpeg',         alt:'גלריה עם מזרנים לילדים'   },
+    { src:'photos/05-bedroom-bright.jpeg',          alt:'חדר שינה זוגי'            },
+    { src:'photos/06-pool.jpeg',                    alt:'בריכת שחייה על דק עץ'     },
+    { src:'photos/07-sunset-palm.jpeg',             alt:'שקיעה עם עץ דקל'          },
+    { src:'photos/08-dining-window.jpeg',           alt:'פינת אוכל עם נוף לגינה'   },
+    { src:'photos/09-bedroom-cozy.jpeg',            alt:'חדר שינה בתאורת ערב'      },
+    { src:'photos/10-wine-welcome.jpeg',            alt:'בקבוק יין קבלת פנים'      },
+    { src:'photos/11-kitchen.jpeg',                 alt:'מטבח מאובזר'               },
+    { src:'photos/12-cabin-side-view.jpeg',         alt:'נוף הגינה מהמרפסת'        },
+    { src:'photos/13-cabin-golden-hour.jpeg',       alt:'הבקתה בשעת הזהב'          },
+    { src:'photos/17-garden-swing-tree.jpeg',       alt:'גינה ירוקה עם נדנדה ועץ'  },
+    { src:'photos/18-vineyard-sunset.jpeg',         alt:'כרם המרלו בשקיעה'          },
+    { src:'photos/19-kinneret-sunset.jpeg',         alt:'שקיעה מהגולן לכנרת'       },
+    { src:'photos/15-natural-spring-pool.jpeg',     alt:'מעיין טבעי בגולן'         },
+  ],
+
+  /* ── הסביבה ─────────────────────────────────────────────────────
+     תמונות מעודכנות: מעיין, כנרת (תמונה חדשה), עגלות קפה
+  ────────────────────────────────────────────────────────────────── */
+  surroundings: {
+    label: 'המיקום',
+    title: 'בלב העניינים של דרום הגולן.',
+    desc:  'מושב נוב הוא נקודת היציאה האידיאלית שלכם.',
+    cards: [
+      {
+        icon:'💧', title:'מעיינות ונחלי הגולן',
+        text:'ברכות מים קרות מתוך הבזלת, נחלים זורמים ותצפיות מרהיבות — בנסיעה קצרה.',
+        image:'photos/20-spring-pool.jpg', imageAlt:'מעיין טבעי בגולן',
+      },
+      {
+        icon:'🌊', title:'הכנרת — כ-25 דקות',
+        text:'גבעות הגולן יורדות עד ים הגליל — הכי יפה באביב כשהכול בפריחה.',
+        image:'photos/19-kinneret-sunset.jpeg', imageAlt:'שקיעה מהגולן לכנרת',
+      },
+      {
+        icon:'☕', title:'עגלות קפה ומסעדה כשרה',
+        text:'עגלות קפה טעימות וייחודיות במרחק הליכה. מסעדה בשרית כשרה במושב עצמו.',
+        image:'photos/21-coffee.jpg', imageAlt:'קפה טעים באזור',
+      },
+    ],
+  },
+
+  /* ── שאלות נפוצות ───────────────────────────────────────────────
+     להוספת שאלה: { question:'...', answer:'...' }
+  ────────────────────────────────────────────────────────────────── */
+  faq: [
+    { question:'כמה אנשים מתאימים לכל בקתה?',            answer:'כל בקתה מתוכננת לזוג + עד 7 ילדים — סה"כ 9 אורחים. חדר שינה זוגי פרטי בקומת הכניסה, ומעליו גלריה מרווחת עם מזרנים לילדים.' },
+    { question:'האם הבריכה פתוחה כל השנה?',              answer:'הבריכה פתוחה בחודשי הקיץ. היא בנויה לתוך דק עץ איכותי ומשותפת לשתי הבקתות.' },
+    { question:'מה לגבי שבת — מתי מגיעים ועוזבים?',     answer:'יש להגיע לפני כניסת שבת. יציאה במוצאי שבת — חצי שעה לאחר צאת השבת. אורחים שאינם שומרי שבת מוזמנים לחנות בכניסה למושב (כ-100 מטר הליכה).' },
+    { question:'האם המסעדה שבמושב כשרה?',                answer:'כן. המסעדה הבשרית במושב נוב כשרה. בנוסף, עגלות קפה טעימות וייחודיות במרחק הליכה.' },
+    { question:'האם מותר להביא חיות מחמד?',             answer:'חיות מחמד מורשות בשטחי החוץ בלבד — לא בתוך הבקתה.' },
+    { question:'האם ניתן לשכור את שתי הבקתות יחד?',    answer:'כן. כל בקתה עצמאית ומושכרת בנפרד, אך ניתן להזמין שתיהן יחד — עד 18 אורחים.' },
+    { question:'מה כלול במחיר?',                         answer:'יין משובח בכניסה, מכונת קפה עם קפה/תה/סוכר/חלב, Wi-Fi, מיזוג אוויר, מטבח מאובזר וג\'קוזי פרטי. מחירים בוואטסאפ.' },
+    { question:'מה הכרם שליד הבקתות?',                  answer:'כרם ענבי מרלו אורגניים בבעלות המשפחה — ממש ליד הבקתות. האורחים מוזמנים לטייל בו ולצלם. הכרם אינו לקטיף.' },
+  ],
+
+  /* ── יצירת קשר ─────────────────────────────────────────────────
+     לשינוי וואטסאפ: whatsapp → 972 + מספרך ללא 0 בהתחלה
+  ────────────────────────────────────────────────────────────────── */
+  contact: {
+    headline: 'בואו לנשום את הגולן.',
+    subline:  'מחירים ופרטים? שלחו לנו וואטסאפ — נשמח לענות.',
+    phone:    '054-606-6674',
+    whatsapp: '972546066674',
+    wazeLink: 'https://waze.com/ul?q=מושב+נוב,+רמת+הגולן',
+  },
+  nav: {
+    about:'אודות', cabins:'בקתות', garden:'גינה', location:'סביבה', faq:'שאלות',
+    waBtn:'הזמינו', showAll:'צפה בכל התמונות', hideGallery:'סגור גלריה',
+    brandName:'בקתות צדיק כתמר', brandSub:'מושב נוב, רמת הגולן',
+    wazeText:'נווטו אלינו בוויז',
+  },
+  about: {
+    label:'ברוכים הבאים', title:'שתי בקתות עץ. עולם שלם בחוץ.',
+    pill1:'זוג + 7 ילדים', pill2:'כרם מרלו אורגני', pill3:'מושב נוב', pill4:"כ-25 ד' מהכנרת",
+    badge:'בקתות עץ פרטיות',
+  },
+  capacity: {
+    titleMain:'מרחב לכל המשפחה — ', titleSub:'זוג + עד 7 ילדים',
+    desc:'נדיר למצוא מקום ברמת הגולן שמתאים למשפחה גדולה. אצלנו — זה בדיוק מה שבנינו.',
+    stat1:"חדר שינה זוגי + ג'קוזי", stat2:'מזרנים בגלריה לילדים', stat3:'אורחים סה״כ לכל בקתה',
+  },
+  cabins: {
+    label:'הבקתות והגינה', title:'עץ חמים. תקרות גבוהות. אור טוב.',
+    desc:"חדר שינה זוגי וג'קוזי פרטי בקומה תחתונה — גלריה מרווחת לילדים מעל.",
+    galleryHint:'← גלול ימינה לראות יותר תמונות',
+  },
+  garden: {
+    label:'הגינה והחוץ', title:'בוסתן, כרם ובריכה — הטבע מחכה בחוץ.',
+    desc:'מחוץ לבקתות מחכה לכם עולם של ירוק: מדשאות רחבות, עצי פרי לקטיף עצמי, כרם ענבי מרלו אורגניים וגינה מטופחת עם עצים גדולים. תשתרעו על הנדנדה בצל, או קפצו לבריכה המרשימה על דק העץ.',
+    li1:"כרם מרלו אורגני ממש ליד הבקתות — לטיול וצילום",
+    li2:"עצי פרי לקטיף עצמי כשהפרי בשל",
+    li3:"בריכה על דק עץ — פתוחה בחודשי הקיץ",
+    li4:"נדנדה ופרגולה לארוחות ולמנוחה בצל",
+    li5:"מדשאות רחבות — לילדים לרוץ ולשחק",
+    poolCard1L:'מיקום', poolCard1V:'בחוץ, על דק עץ',
+    poolCard2L:'עונה',  poolCard2V:'חודשי הקיץ',
+    poolCard3L:"ג'קוזי", poolCard3V:'פרטי בתוך כל בקתה',
+    poolCard4L:'שיתוף', poolCard4V:'לאורחי שתי הבקתות',
+  },
+  wine: {
+    label:'המגע של המארח', title:'פותחים את הבוקר בנחת. סוגרים עם יין.',
+    desc:'מכונת קפה, קפה, תה, סוכר וחלב — לבוקר הגולני האיטי. ובכניסה? בקבוק יין משובח מחכה לכם על השולחן.',
+    quote:'"לא צריך לחשוב על כלום — הכל כבר כאן בשבילכם."',
+  },
+  faqSection: { title:'כל מה שרציתם לדעת.' },
+  contactSection: { label:'צרו קשר' },
+  footer: {
+    name:'בקתות צדיק כתמר',
+    sub:'בקתות עץ · מושב נוב, רמת הגולן',
+    rights:'כל הזכויות שמורות © 2025',
+  },
+
+  accessibilityStatement: 'אתר זה של בקתות צדיק כתמר שואף לעמוד בדרישות תקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות) תשע"ג-2013. האתר מותאם לשימוש עם קוראי מסך, ניגוד גבוה ושינוי גודל גופן. ניווט מלא אפשרי באמצעות מקלדת. לדיווח על בעיית נגישות, פנו אלינו בוואטסאפ ונטפל בפנייתכם בהקדם.',
+
+};
+/* ════════════════ סוף SITE_CONTENT ════════════════════════════════ */
+
+/* ════════════════════════════════════════════════════════════════════
+   ██  ENGLISH CONTENT  ██
+   ════════════════════════════════════════════════════════════════════ */
+const SITE_CONTENT_EN = {
+  meta: {
+    title: 'Tzadik Katmar Cabins | Moshav Nov, Golan Heights',
+    description: 'Two luxury wooden cabins in Moshav Nov — couple + up to 7 children, pool, private jacuzzi, organic Merlot vineyard.',
+    ogImage: 'photos/13-cabin-golden-hour.jpeg',
+  },
+  hero: {
+    eyebrow:  'Moshav Nov, Golan Heights',
+    title:    'Tzadik Katmar Cabins',
+    subtitle: 'Your place in the Golan',
+    bgImage:  'photos/13-cabin-golden-hour.jpeg',
+    ctaText:  'Check availability & book',
+    cta2Text: 'Discover more ↓',
+    stats: [
+      { num:'9',      label:'guests per cabin'     },
+      { num:'2',      label:'private wood cabins'  },
+      { num:'~25m',   label:'to the Sea of Galilee'},
+    ],
+  },
+  mainParagraph: 'In the quiet Moshav Nov, two large wooden cabins await you, designed for families (couple + 7 kids). Enjoy complete privacy, a refreshing pool, a private jacuzzi, and views of our organic Merlot vineyard. We are a short drive from unique coffee carts, the most beautiful springs in the Golan, and just ~25 minutes from the Sea of Galilee.',
+  vineyardNote:  'Organic Merlot grapes only.',
+  keyFeatures: [
+    { icon:'👨‍👩‍👧‍👦', label:'Couple + 7 children'      },
+    { icon:'🛁',       label:'Private jacuzzi in cabin' },
+    { icon:'🏊',       label:'Pool on a wooden deck'    },
+    { icon:'🍇',       label:'Organic Merlot vineyard'  },
+    { icon:'🍷',       label:'Welcome wine'             },
+    { icon:'☕',       label:'Coffee machine + kit'     },
+    { icon:'🌳',       label:'Fruit orchard'            },
+    { icon:'🐾',       label:'Pets — outdoors only'     },
+  ],
+  showcaseImages: [
+    { src:'photos/03-cabin-exterior-pergola.jpeg', alt:'Tzadik Katmar cabin exterior', label:'The Cabin' },
+    { src:'photos/06-pool.jpeg',                   alt:'Swimming pool on wooden deck',  label:'The Pool'  },
+    { src:'photos/17-garden-swing-tree.jpeg',      alt:'Green garden with swing',       label:'The Garden'},
+  ],
+  galleryImages: [
+    { src:'photos/01-living-dining.jpeg',         alt:'Living and dining area'          },
+    { src:'photos/02-kitchenette.jpeg',            alt:'Kitchenette and living room'     },
+    { src:'photos/03-cabin-exterior-pergola.jpeg', alt:'Cabin exterior with pergola'    },
+    { src:'photos/04-loft-mattresses.jpeg',        alt:'Loft with mattresses for kids'  },
+    { src:'photos/05-bedroom-bright.jpeg',         alt:'Bright double bedroom'          },
+    { src:'photos/06-pool.jpeg',                   alt:'Swimming pool on wooden deck'   },
+    { src:'photos/07-sunset-palm.jpeg',            alt:'Sunset with palm tree'          },
+    { src:'photos/08-dining-window.jpeg',          alt:'Dining area with garden view'   },
+    { src:'photos/09-bedroom-cozy.jpeg',           alt:'Cozy bedroom at evening'        },
+    { src:'photos/10-wine-welcome.jpeg',           alt:'Welcome wine bottle'            },
+    { src:'photos/11-kitchen.jpeg',                alt:'Fully equipped kitchen'         },
+    { src:'photos/12-cabin-side-view.jpeg',        alt:'Garden view from porch'         },
+    { src:'photos/13-cabin-golden-hour.jpeg',      alt:'Cabin at golden hour'           },
+    { src:'photos/17-garden-swing-tree.jpeg',      alt:'Green garden with swing'        },
+    { src:'photos/18-vineyard-sunset.jpeg',        alt:'Merlot vineyard at sunset'      },
+    { src:'photos/19-kinneret-sunset.jpeg',        alt:'Sunset over Sea of Galilee'     },
+    { src:'photos/15-natural-spring-pool.jpeg',    alt:'Natural spring in the Golan'    },
+  ],
+  surroundings: {
+    label: 'Location',
+    title: 'In the heart of Southern Golan.',
+    desc:  'Moshav Nov is your perfect base for exploring.',
+    cards: [
+      {
+        icon:'💧', title:'Golan Springs & Streams',
+        text:'Cold basalt pools, flowing streams and breathtaking views — a short drive away.',
+        image:'photos/20-spring-pool.jpg', imageAlt:'Natural spring in the Golan',
+      },
+      {
+        icon:'🌊', title:'Sea of Galilee — ~25 min',
+        text:'The Golan hills roll down to the Sea of Galilee — most beautiful in spring bloom.',
+        image:'photos/19-kinneret-sunset.jpeg', imageAlt:'Sunset over Sea of Galilee',
+      },
+      {
+        icon:'☕', title:'Coffee Carts & Kosher Restaurant',
+        text:'Unique coffee carts within walking distance. A kosher meat restaurant in Moshav Nov itself.',
+        image:'photos/21-coffee.jpg', imageAlt:'Great coffee in the area',
+      },
+    ],
+  },
+  faq: [
+    { question:'How many guests fit in each cabin?',       answer:'Each cabin fits a couple + up to 7 children — 9 guests total. A private double bedroom on the entry level, with a spacious loft with mattresses for the kids above.' },
+    { question:'Is the pool open year-round?',             answer:'The pool is open during the summer months. It is built into a quality wooden deck and shared between the two cabins.' },
+    { question:'What about Shabbat — arrival and departure?', answer:'Guests must arrive before Shabbat begins. Departure is half an hour after Shabbat ends. Non-observant guests are welcome to park at the moshav entrance (~100m walk).' },
+    { question:'Is the restaurant in the moshav kosher?',  answer:'Yes. The meat restaurant in Moshav Nov is kosher. There are also unique coffee carts within walking distance.' },
+    { question:'Are pets allowed?',                        answer:'Pets are welcome in the outdoor areas only — not inside the cabin.' },
+    { question:'Can both cabins be rented together?',      answer:'Yes. Each cabin is independent and rented separately, but both can be booked together — up to 18 guests.' },
+    { question:'What is included in the price?',           answer:'Quality welcome wine, coffee machine with coffee/tea/sugar/milk, Wi-Fi, A/C, fully equipped kitchen and private jacuzzi. Prices via WhatsApp.' },
+    { question:'What is the vineyard next to the cabins?', answer:'An organic Merlot vineyard owned by the family — right next to the cabins. Guests are welcome to stroll and photograph. The vineyard is not open for picking.' },
+  ],
+  contact: {
+    headline: 'Come breathe the Golan.',
+    subline:  'Prices and details? Send us a WhatsApp — happy to help.',
+    phone:    '054-606-6674',
+    whatsapp: '972546066674',
+    wazeLink: 'https://waze.com/ul?q=Moshav+Nov,+Golan+Heights',
+  },
+  nav: {
+    about:'About', cabins:'Cabins', garden:'Garden', location:'Area', faq:'FAQ',
+    waBtn:'Book', showAll:'View all photos', hideGallery:'Hide gallery',
+    brandName:'Tzadik Katmar Cabins', brandSub:'Moshav Nov, Golan Heights',
+    wazeText:'Navigate with Waze',
+  },
+  about: {
+    label:'Welcome', title:'Two wood cabins. A whole world outside.',
+    pill1:'Couple + 7 children', pill2:'Organic Merlot vineyard', pill3:'Moshav Nov', pill4:"~25 min to Sea of Galilee",
+    badge:'Private wood cabins',
+  },
+  capacity: {
+    titleMain:'Space for the whole family — ', titleSub:'couple + up to 7 children',
+    desc:"It's rare to find a place in the Golan that fits a large family. Here — that's exactly what we built.",
+    stat1:'Double bedroom + jacuzzi', stat2:'Loft mattresses for kids', stat3:'Guests total per cabin',
+  },
+  cabins: {
+    label:'The Cabins & Garden', title:'Warm wood. High ceilings. Good light.',
+    desc:"Private double bedroom and jacuzzi on the ground floor — a spacious loft for kids above.",
+    galleryHint:'← Scroll right to see more photos',
+  },
+  garden: {
+    label:'Garden & Outdoors', title:'Orchard, vineyard and pool — nature waits outside.',
+    desc:'Outside the cabins, a world of green awaits: wide lawns, fruit trees for self-picking, an organic Merlot vineyard, and a manicured garden with large trees. Swing in the shade, or jump into the impressive pool on the wooden deck.',
+    li1:'Organic Merlot vineyard right next to the cabins — for walks and photos',
+    li2:'Fruit trees for self-picking when the fruit is ripe',
+    li3:'Pool on a wooden deck — open in summer months',
+    li4:'Swing and pergola for meals and relaxing in the shade',
+    li5:'Wide lawns — for kids to run and play',
+    poolCard1L:'Location', poolCard1V:'Outside, on wooden deck',
+    poolCard2L:'Season',   poolCard2V:'Summer months',
+    poolCard3L:'Jacuzzi',  poolCard3V:'Private inside each cabin',
+    poolCard4L:'Shared',   poolCard4V:'For guests of both cabins',
+  },
+  wine: {
+    label:"The host's touch", title:'Start the morning easy. End with wine.',
+    desc:'Coffee machine, coffee, tea, sugar and milk — for the slow Golan morning. And at the entrance? A quality bottle of wine waiting for you on the table.',
+    quote:'"No need to think about anything — everything is already here for you."',
+  },
+  faqSection: { title:'Everything you wanted to know.' },
+  contactSection: { label:'Contact us' },
+  wine: {
+    label:'The Experience',
+    title:'Every detail — chosen with love.',
+    desc:'A bottle of wine to welcome you, morning coffee waiting, and a fruit orchard outside your door.',
+    wineTitle:'Wine & Coffee',
+    wineText:'A quality bottle of wine awaits you upon arrival. In the morning — a coffee machine with everything you need for the perfect cup.',
+  },
+  garden: {
+    label:'Garden & Outdoors',
+    title:'Step outside into nature.',
+    gardenAlt:'Green garden with swing and tree',
+    vineyardAlt:'Merlot vineyard at sunset',
+  },
+  about: {
+    label:'About the Cabins',
+    title:'Two wood cabins in the Golan for families.',
+    pill:'Organic Merlot grapes only',
+  },
+  galleryBtn:   'View all photos',
+  galleryHide:  'Hide gallery',
+  cabinsLabel:  'The Cabins',
+  cabinsTitle:  'Spacious, designed, private.',
+  footer: {
+    name:'Tzadik Katmar Cabins',
+    sub:'Wood cabins · Moshav Nov, Golan Heights',
+    rights:'All rights reserved © 2025',
+  },
+};
+
+</script>
+
+<!-- ══ FLOATING WHATSAPP ══════════════════════════════════════════ -->
+<a id="waFloat" href="#" target="_blank" rel="noopener" aria-label="פתח וואטסאפ"
+   class="wa-pulse fixed bottom-6 left-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-xl hover:scale-110 transition-transform">
+  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C5.7 9.7 5 10.4 5 11.9s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4A10 10 0 0 0 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+
+
+<!-- ══ STICKY NAV ════════════════════════════════════════════════ -->
+<nav id="mainNav" class="fixed top-0 inset-x-0 z-40 h-16 px-5 md:px-10 flex items-center justify-between">
+  <div id="navBrand" class="text-white transition-colors leading-tight">
+    <span id="navBrandName" class="font-bold text-lg block">בקתות צדיק כתמר</span>
+    <span id="navBrandSub" class="text-xs opacity-80 font-light">מושב נוב, רמת הגולן</span>
+  </div>
+  <div class="flex items-center gap-3">
+    <div class="hidden md:flex gap-5 text-sm font-medium" id="navLinks">
+      <a href="#about"    class="text-white/80 hover:text-white transition-colors">אודות</a>
+      <a href="#cabins"   class="text-white/80 hover:text-white transition-colors">בקתות</a>
+      <a href="#garden"   class="text-white/80 hover:text-white transition-colors">גינה</a>
+      <a href="#location" class="text-white/80 hover:text-white transition-colors">סביבה</a>
+      <a href="#faq"      class="text-white/80 hover:text-white transition-colors">שאלות</a>
+    </div>
+    <button id="langToggleBtn" onclick="toggleLang()"
+       class="text-white/80 hover:text-white text-sm font-bold px-3 py-1.5 rounded-full border border-white/30 hover:border-white/60 transition-all"
+       aria-label="Switch language">EN</button>
+    <a id="navWa" href="#" target="_blank" rel="noopener"
+       class="flex items-center gap-2 bg-green-700 text-white text-sm font-bold px-4 py-2 rounded-full hover:-translate-y-0.5 transition-transform shadow">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C5.7 9.7 5 10.4 5 11.9s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4A10 10 0 0 0 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+      <span id="navWaTxt" class="hidden sm:inline">הזמינו</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-end pb-14 overflow-hidden text-white" id="top">
+  <div id="heroBg" class="hero-zoom absolute inset-0 bg-cover bg-center"></div>
+  <div class="hero-overlay absolute inset-0"></div>
+  <div class="relative z-10 max-w-5xl mx-auto px-6 md:px-10 w-full">
+    <div class="inline-flex items-center gap-2 bg-white/15 border border-white/30 backdrop-blur-sm px-4 py-1.5 rounded-full text-sm font-medium mb-5" style="opacity:0;animation:fadeUp .8s .3s forwards">
+      <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      <span id="heroEyebrow"></span>
+    </div>
+    <h1 id="heroTitle" class="font-bold leading-tight mb-2" aria-label="בקתות צדיק כתמר" style="font-size:clamp(36px,7vw,88px);opacity:0;animation:fadeUp .9s .5s forwards"></h1>
+    <div id="heroSubtitle" class="font-bold text-yellow-300 mb-6" style="font-size:clamp(22px,4vw,52px);opacity:0;animation:fadeUp .9s .65s forwards"></div>
+    <p id="heroBody" class="text-white/90 font-light mb-8 max-w-xl leading-relaxed" style="font-size:clamp(15px,2vw,18px);opacity:0;animation:fadeUp .9s .8s forwards"></p>
+    <div class="flex flex-wrap gap-3" style="opacity:0;animation:fadeUp .9s .95s forwards">
+      <a id="heroCta" href="#" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2.5 bg-green-700 text-white font-bold px-7 py-4 rounded-full text-lg shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C5.7 9.7 5 10.4 5 11.9s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4A10 10 0 0 0 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        <span id="heroCtaTxt"></span>
+      </a>
+      <a href="#about" class="inline-flex items-center gap-2 bg-white/15 border border-white/40 backdrop-blur-sm text-white font-semibold px-7 py-4 rounded-full text-lg hover:bg-white/25 transition-all">
+        <span id="heroCta2Txt"></span>
+      </a>
+    </div>
+    <div id="heroStats" class="flex flex-wrap gap-8 mt-10 pt-8 border-t border-white/20" style="opacity:0;animation:fadeUp .9s 1.1s forwards"></div>
+  </div>
+</section>
+<style>@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}</style>
+
+<!-- ══ KEY FEATURES BAR ══════════════════════════════════════════ -->
+<div class="text-white py-4 px-5" style="background:#1a2e1a">
+  <div id="featBar" class="max-w-5xl mx-auto flex flex-wrap justify-center gap-x-7 gap-y-2.5"></div>
+</div>
+
+<!-- ══ ABOUT ═════════════════════════════════════════════════════ -->
+<section id="about" class="py-20 section-cream">
+  <div class="max-w-5xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-5 gap-12 items-center">
+      <div class="md:col-span-3 reveal">
+        <div id="aboutLabel" class="sec-label">ברוכים הבאים</div>
+        <h2 id="aboutTitle" class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-5">שתי בקתות עץ. עולם שלם בחוץ.</h2>
+        <p id="mainParaEl" class="text-gray-600 leading-relaxed text-lg font-light mb-4"></p>
+        <div id="vineyardNoteEl" class="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-full" style="background:#e8f0e8;color:#2d4a2d"></div>
+        <div class="flex flex-wrap gap-2 mt-5">
+          <span id="pill1" class="pill">זוג + 7 ילדים</span>
+          <span id="pill2" class="pill">כרם מרלו אורגני</span>
+          <span id="pill3" class="pill">מושב נוב</span>
+          <span id="pill4" class="pill">כ-25 ד' מהכנרת</span>
+        </div>
+      </div>
+      <div class="md:col-span-2 reveal">
+        <div class="rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] relative">
+          <img src="photos/03-cabin-exterior-pergola.jpeg" alt="בקתות צדיק כתמר" class="w-full h-full object-cover"/>
+          <div class="absolute bottom-5 right-5 bg-white rounded-xl shadow-xl p-4">
+            <div class="text-3xl font-bold" style="color:#2d4a2d">2</div>
+            <div id="aboutBadge" class="text-xs text-gray-500 mt-0.5">בקתות עץ פרטיות</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>.pill{padding:7px 17px;border-radius:100px;font-size:13px;font-weight:600;background:#e8f0e8;color:#2d4a2d;display:inline-block}</style>
+
+<!-- ══ CAPACITY ══════════════════════════════════════════════════ -->
+<div class="py-14" style="background:#2d4a2d">
+  <div class="max-w-4xl mx-auto px-6 text-center text-white reveal">
+    <h2 id="capTitle" class="text-3xl md:text-5xl font-bold mb-3"><span id="capTitleMain">מרחב לכל המשפחה — </span><span class="text-yellow-300" id="capTitleSub">זוג + עד 7 ילדים</span></h2>
+    <p id="capDesc" class="text-white/80 text-lg mb-10 font-light">נדיר למצוא מקום ברמת הגולן שמתאים למשפחה גדולה. אצלנו — זה בדיוק מה שבנינו.</p>
+    <div class="grid grid-cols-3 divide-x divide-x-reverse border rounded-2xl overflow-hidden max-w-2xl mx-auto" style="border-color:rgba(255,255,255,.2)">
+      <div class="py-7"><div class="text-4xl font-bold text-yellow-300">1</div><div id="capStat1" class="text-sm text-white/70 mt-2">חדר שינה זוגי + ג'קוזי</div></div>
+      <div class="py-7"><div class="text-4xl font-bold text-yellow-300">7</div><div id="capStat2" class="text-sm text-white/70 mt-2">מזרנים בגלריה לילדים</div></div>
+      <div class="py-7"><div class="text-4xl font-bold text-yellow-300">9</div><div id="capStat3" class="text-sm text-white/70 mt-2">אורחים סה״כ לכל בקתה</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CABINS / SHOWCASE ═════════════════════════════════════════ -->
+<section id="cabins" class="py-20 section-white">
+  <div class="max-w-5xl mx-auto px-6 md:px-10">
+    <div id="cabinsLabel" class="sec-label reveal">הבקתות והגינה</div>
+    <h2 id="cabinsTitle" class="text-3xl md:text-4xl font-bold text-gray-800 mb-3 reveal">עץ חמים. תקרות גבוהות. אור טוב.</h2>
+    <p id="cabinsDesc" class="text-gray-500 text-lg font-light mb-8 reveal">חדר שינה זוגי וג'קוזי פרטי בקומה תחתונה — גלריה מרווחת לילדים מעל.</p>
+    <div id="showcaseGrid" class="grid md:grid-cols-3 gap-4 mb-6 reveal"></div>
+    <div class="text-center reveal">
+      <button onclick="toggleGallery()" id="galleryToggleBtn"
+        class="inline-flex items-center gap-2 border-2 font-semibold px-6 py-3 rounded-full text-sm transition-all"
+        style="border-color:#2d4a2d;color:#2d4a2d;background:transparent"
+        onmouseover="this.style.background='#2d4a2d';this.style.color='#fff'"
+        onmouseout="this.style.background='transparent';this.style.color='#2d4a2d'">
+        <span id="galleryBtnTxt">📷 צפה בכל התמונות</span>
+      </button>
+    </div>
+    <div id="fullGallery" class="hidden mt-6">
+      <div id="galleryScroll" class="gallery-scroll pb-3"></div>
+      <p id="galleryHint" class="text-center text-xs text-gray-400 mt-3">← גלול ימינה לראות יותר תמונות</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GARDEN ════════════════════════════════════════════════════ -->
+<section id="garden" class="py-20 section-cream">
+  <div class="max-w-5xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <div class="reveal">
+        <div id="gardenLabel" class="sec-label">הגינה והחוץ</div>
+        <h2 id="gardenTitle" class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-5">בוסתן, כרם ובריכה — הטבע מחכה בחוץ.</h2>
+        <p id="gardenDesc" class="text-gray-600 leading-relaxed text-lg font-light mb-6">מחוץ לבקתות מחכה לכם עולם של ירוק: מדשאות רחבות, עצי פרי לקטיף עצמי, כרם ענבי מרלו אורגניים וגינה מטופחת עם עצים גדולים. תשתרעו על הנדנדה בצל, או קפצו לבריכה המרשימה על דק העץ.</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3 text-gray-700"><span class="text-xl">🍇</span><span id="gardenLi1" class="font-light">כרם מרלו אורגני ממש ליד הבקתות — לטיול וצילום</span></li>
+          <li class="flex items-start gap-3 text-gray-700"><span class="text-xl">🌳</span><span id="gardenLi2" class="font-light">עצי פרי לקטיף עצמי כשהפרי בשל</span></li>
+          <li class="flex items-start gap-3 text-gray-700"><span class="text-xl">🏊</span><span id="gardenLi3" class="font-light">בריכה על דק עץ — פתוחה בחודשי הקיץ</span></li>
+          <li class="flex items-start gap-3 text-gray-700"><span class="text-xl">🛋️</span><span id="gardenLi4" class="font-light">נדנדה ופרגולה לארוחות ולמנוחה בצל</span></li>
+          <li class="flex items-start gap-3 text-gray-700"><span class="text-xl">🌿</span><span id="gardenLi5" class="font-light">מדשאות רחבות — לילדים לרוץ ולשחק</span></li>
+        </ul>
+        <!-- Pool info — ללא תאריכים ספציפיים וללא שעות בלעדיות -->
+        <div class="grid grid-cols-2 gap-3">
+          <div class="rounded-xl p-4" style="background:rgba(139,94,60,.07)"><div id="poolCard1L" class="text-xs font-bold tracking-wider text-gray-400 uppercase mb-1">מיקום</div><div id="poolCard1V" class="font-semibold text-sm text-gray-800">בחוץ, על דק עץ</div></div>
+          <div class="rounded-xl p-4" style="background:rgba(139,94,60,.07)"><div id="poolCard2L" class="text-xs font-bold tracking-wider text-gray-400 uppercase mb-1">עונה</div><div id="poolCard2V" class="font-semibold text-sm text-gray-800">חודשי הקיץ</div></div>
+          <div class="rounded-xl p-4" style="background:rgba(139,94,60,.07)"><div id="poolCard3L" class="text-xs font-bold tracking-wider text-gray-400 uppercase mb-1">ג'קוזי</div><div id="poolCard3V" class="font-semibold text-sm text-gray-800">פרטי בתוך כל בקתה</div></div>
+          <div class="rounded-xl p-4" style="background:rgba(139,94,60,.07)"><div id="poolCard4L" class="text-xs font-bold tracking-wider text-gray-400 uppercase mb-1">שיתוף</div><div id="poolCard4V" class="font-semibold text-sm text-gray-800">לאורחי שתי הבקתות</div></div>
+        </div>
+      </div>
+      <!-- תמונות גינה: גינה+נדנדה (ימין) וכרם בשקיעה (שמאל — תמונה חדשה) -->
+      <div class="reveal grid grid-cols-2 gap-3">
+        <div class="rounded-xl overflow-hidden aspect-[3/4] shadow-lg">
+          <img src="photos/17-garden-swing-tree.jpeg" alt="גינה ירוקה עם נדנדה ועץ" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"/>
+        </div>
+        <div class="rounded-xl overflow-hidden aspect-[3/4] mt-8 shadow-lg">
+          <img src="photos/18-vineyard-sunset.jpeg" alt="כרם המרלו בשקיעה" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EXPERIENCE / WINE ═════════════════════════════════════════ -->
+<section class="grid md:grid-cols-2 min-h-[420px]">
+  <div class="bg-cover bg-center" style="background-image:url('photos/10-wine-welcome.jpeg');min-height:280px"></div>
+  <div class="flex flex-col justify-center px-10 py-14 reveal" style="background:#fdf6e3">
+    <div id="wineLabel" class="sec-label">המגע של המארח</div>
+    <h2 id="wineTitle" class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-5">פותחים את הבוקר בנחת. סוגרים עם יין.</h2>
+    <!-- יין משובח בלבד — ללא ציון גולני -->
+    <p id="wineDesc" class="text-gray-600 text-lg font-light leading-relaxed">מכונת קפה, קפה, תה, סוכר וחלב — לבוקר הגולני האיטי. ובכניסה? בקבוק יין משובח מחכה לכם על השולחן.</p>
+    <div class="mt-6 p-5 rounded-xl border-r-4" style="border-color:#b8860b;background:rgba(255,255,255,.6)">
+      <p id="wineQuote" class="text-gray-500 font-light text-sm italic">"לא צריך לחשוב על כלום — הכל כבר כאן בשבילכם."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SURROUNDINGS ══════════════════════════════════════════════ -->
+<section id="location" class="py-20 section-white">
+  <div class="max-w-5xl mx-auto px-6 md:px-10">
+    <div class="sec-label reveal" id="surroundLabel"></div>
+    <h2 id="surroundTitle" aria-label="אזור הסביבה" class="text-3xl md:text-4xl font-bold text-gray-800 mb-3 reveal"></h2>
+    <p id="surroundDesc" class="text-gray-500 text-lg font-light mb-10 reveal"></p>
+    <div id="surroundCards" class="grid md:grid-cols-3 gap-6 reveal"></div>
+  </div>
+</section>
+
+<!-- ══ FAQ ════════════════════════════════════════════════════════ -->
+<section id="faq" class="py-20 section-cream">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <div class="sec-label" style="justify-content:center">שאלות נפוצות</div>
+      <h2 id="faqTitle" class="text-3xl md:text-4xl font-bold text-gray-800">כל מה שרציתם לדעת.</h2>
+    </div>
+    <div id="faqList" class="space-y-3 reveal"></div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ════════════════════════════════════════════════════ -->
+<section id="contact" class="py-24 text-white text-center relative overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('photos/22-windmills-sunset.jpg')"></div>
+  <div class="absolute inset-0" style="background:rgba(0,0,0,0.55)"></div>
+  <div class="max-w-2xl mx-auto px-6 relative z-10">
+    <div id="contactLabel" class="text-yellow-300/80 text-xs font-bold tracking-widest mb-4 reveal">צרו קשר</div>
+    <h2 id="contactH" aria-label="יצירת קשר" class="text-4xl md:text-6xl font-bold leading-tight mb-4 reveal"></h2>
+    <p id="contactSub" class="text-white/80 text-lg font-light mb-10 reveal"></p>
+    <div class="flex flex-wrap justify-center gap-4 mb-6 reveal">
+      <a id="ctaWa" href="#" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-3 bg-green-700 text-white font-bold text-lg px-10 py-5 rounded-full shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C5.7 9.7 5 10.4 5 11.9s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4A10 10 0 0 0 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        שלחו לנו וואטסאפ
+      </a>
+      <a id="ctaCall" href="#" class="inline-flex items-center gap-3 bg-white/15 border border-white/35 text-white font-semibold text-lg px-10 py-5 rounded-full hover:bg-white/25 transition-all">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        <span id="ctaPhone"></span>
+      </a>
+    </div>
+    <a id="ctaWaze" href="#" target="_blank" rel="noopener" class="text-white/55 text-sm hover:text-white transition-colors reveal">📍 <span id="wazeText">נווטו אלינו בוויז</span></a>
+  </div>
+</section>
+
+<!-- ══ ACCESSIBILITY STATEMENT ═══════════════════════════════════ -->
+<section id="a11yStatement" class="py-16 section-cream">
+  <div class="max-w-3xl mx-auto px-6">
+
+    <div class="sec-label">נגישות</div>
+    <h2 class="text-2xl font-bold text-gray-800 mb-2">הצהרת נגישות</h2>
+    <p class="text-sm text-gray-400 mb-8">עודכן לאחרונה: יוני 2025</p>
+
+    <div class="space-y-6 text-gray-600 text-sm leading-relaxed">
+
+      <div>
+        <h3 class="font-bold text-gray-800 text-base mb-2">מחויבות לנגישות</h3>
+        <p>בקתות צדיק כתמר מחויבת לאפשר שימוש שוויוני ונגיש לאתר עבור אנשים עם מוגבלויות. אנו פועלים להטמעת דרישות תקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות) תשע"ג-2013, ולעמידה ברמת AA של תקן WCAG 2.1 הבינלאומי, המהווה את הבסיס לתקן הישראלי ת"י 5568.</p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-gray-800 text-base mb-2">התאמות הנגישות באתר</h3>
+        <ul class="list-disc list-inside space-y-1 mr-2">
+          <li>ניווט מלא באמצעות מקלדת בלבד</li>
+          <li>תמיכה בקוראי מסך (NVDA, JAWS, VoiceOver)</li>
+          <li>כפתור נגישות המאפשר שינוי גודל טקסט, ניגודיות, גופן לדיסלקציה ועוד</li>
+          <li>תגיות ARIA מלאות לכל אלמנטים אינטראקטיביים</li>
+          <li>טקסט חלופי (alt) לכל התמונות</li>
+          <li>יחסי ניגודיות צבע העומדים בדרישות AA (4.5:1 לפחות לטקסט)</li>
+          <li>מבנה כותרות היררכי ועקבי</li>
+          <li>קישור "דלג לתוכן ראשי" בראש העמוד</li>
+          <li>תמיכה מלאה בכיוון RTL ובשפה העברית</li>
+          <li>שמירת העדפות הנגישות בין ביקורים</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-gray-800 text-base mb-2">מגבלות ידועות</h3>
+        <p>אנו עושים מאמץ לשפר את הנגישות באופן מתמיד. ייתכן שחלק מהתכנים הישנים או תמונות מסוימות טרם עמדו בכל דרישות הנגישות. אנו מטפלים בכך באופן שוטף.</p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-gray-800 text-base mb-2">פנייה בנושא נגישות</h3>
+        <p>נתקלתם בבעיית נגישות, או שיש לכם צורך בהתאמה מיוחדת? נשמח לסייע.</p>
+        <div class="mt-3 flex flex-wrap gap-3">
+          <a href="https://wa.me/972546066674" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 bg-green-700 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-green-700 transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C5.7 9.7 5 10.4 5 11.9s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4A10 10 0 0 0 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+            וואטסאפ — 054-606-6674
+          </a>
+          <a href="tel:0546066674"
+             class="inline-flex items-center gap-2 bg-forest text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-forest-mid transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.58 3.44 2 2 0 0 1 3.55 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 6.29 6.29l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            שיחת טלפון
+          </a>
+        </div>
+        <p class="mt-3 text-xs text-gray-400">נטפל בפנייתכם בהקדם האפשרי ולא יאוחר מ-5 ימי עסקים.</p>
+      </div>
+
+      <div class="border-t border-gray-200 pt-4">
+        <h3 class="font-bold text-gray-800 text-base mb-2">רגולציה ותקנים</h3>
+        <p>הצהרה זו עומדת בדרישות תקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות) תשע"ג-2013, תקן ישראלי ת"י 5568, ו-WCAG 2.1 ברמת AA.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════ -->
+<footer class="bg-gray-900 text-white/50 text-sm py-8 px-6">
+  <div class="max-w-5xl mx-auto flex flex-wrap justify-between items-center gap-4">
+    <div>
+      <div id="footerName" class="text-white font-bold text-base">בקתות צדיק כתמר</div>
+      <div id="footerSub" class="text-xs mt-1">בקתות עץ · מושב נוב, רמת הגולן</div>
+    </div>
+    <div class="flex gap-5 text-xs">
+      <a href="#a11yStatement" class="hover:text-white transition-colors">הצהרת נגישות</a>
+      <span id="footerRights">כל הזכויות שמורות © 2025</span>
+    </div>
+  </div>
+</footer>
+<!-- ══ LIGHTBOX ════════════════════════════════════════════════════ -->
+<div id="lightbox" role="dialog" aria-modal="true" onclick="closeLB()">
+  <button onclick="closeLB()" class="absolute top-4 left-4 text-white text-5xl opacity-70 hover:opacity-100 leading-none" aria-label="סגור">×</button>
+  <button onclick="event.stopPropagation();prevLB()" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-5xl opacity-60 hover:opacity-100" aria-label="הקודם">‹</button>
+  <button onclick="event.stopPropagation();nextLB()" class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-5xl opacity-60 hover:opacity-100" aria-label="הבא">›</button>
+  <img id="lbImg" src="" alt="" role="img" aria-labelledby="lbCaption" onclick="event.stopPropagation()" class="rounded-xl shadow-2xl"/>
+  <div id="lbCounter" class="absolute bottom-6 text-white/60 text-sm"></div>
+</div>
+
+<!-- ══ RENDER ENGINE ══════════════════════════════════════════════ -->
+<script>
+const C = SITE_CONTENT;
+const WA = `https://wa.me/${C.contact.whatsapp}`;
+
+/* META */
+document.getElementById('pageTitle').textContent = C.meta.title;
+document.getElementById('pageDesc').content      = C.meta.description;
+document.getElementById('ogTitle').content       = C.meta.title;
+document.getElementById('ogDesc').content        = C.meta.description;
+document.getElementById('ogImage').content       = C.meta.ogImage;
+
+/* WA LINKS */
+['waFloat','navWa','heroCta','ctaWa'].forEach(id=>{
+  const el=document.getElementById(id); if(el) el.href=WA;
+});
+
+/* HERO */
+document.getElementById('heroBg').style.backgroundImage=`url('${C.hero.bgImage}')`;
+document.getElementById('heroEyebrow').textContent =C.hero.eyebrow;
+document.getElementById('heroTitle').textContent   =C.hero.title;
+document.getElementById('heroSubtitle').textContent=C.hero.subtitle;
+document.getElementById('heroBody').textContent    =C.mainParagraph;
+document.getElementById('heroCtaTxt').textContent  =C.hero.ctaText;
+document.getElementById('heroCta2Txt').textContent =C.hero.cta2Text;
+const statsEl=document.getElementById('heroStats');
+C.hero.stats.forEach(s=>{statsEl.innerHTML+=`<div><div class="text-3xl font-bold text-yellow-300">${s.num}</div><div class="text-sm text-white/75 mt-1">${s.label}</div></div>`;});
+
+/* FEATURES BAR */
+const fb=document.getElementById('featBar');
+C.keyFeatures.forEach(f=>{fb.innerHTML+=`<div class="flex items-center gap-2 text-sm font-medium text-white/90"><span class="text-xl">${f.icon}</span><span>${f.label}</span></div>`;});
+
+/* ABOUT */
+document.getElementById('mainParaEl').textContent   =C.mainParagraph;
+document.getElementById('vineyardNoteEl').innerHTML =`🍇 ${C.vineyardNote}`;
+
+/* SHOWCASE */
+const sg=document.getElementById('showcaseGrid');
+C.showcaseImages.forEach((img,i)=>{
+  const div=document.createElement('div');
+  div.className='relative rounded-2xl overflow-hidden cursor-pointer group shadow-lg aspect-[4/3]';
+  div.innerHTML=`<img src="${img.src}" alt="${img.alt}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>`;
+  div.addEventListener('click',()=>openLB(i,C.showcaseImages.map(x=>x.src)));
+  sg.appendChild(div);
+});
+
+/* GALLERY */
+const gs=document.getElementById('galleryScroll');
+C.galleryImages.forEach((img,i)=>{
+  const div=document.createElement('div');
+  div.className='g-item w-56 h-56 md:w-72 md:h-64';
+  div.innerHTML=`<img src="${img.src}" alt="${img.alt}" loading="lazy" class="w-full h-full object-cover"/>`;
+  div.addEventListener('click',()=>openLB(i,C.galleryImages.map(x=>x.src)));
+  gs.appendChild(div);
+});
+let galleryOpen=false;
+function toggleGallery(){
+  galleryOpen=!galleryOpen;
+  document.getElementById('fullGallery').classList.toggle('hidden',!galleryOpen);
+  document.getElementById('galleryBtnTxt').textContent=galleryOpen?'✕ סגור גלריה':'📷 צפה בכל התמונות';
+}
+
+/* SURROUNDINGS */
+const S=C.surroundings;
+document.getElementById('surroundLabel').textContent=S.label;
+document.getElementById('surroundTitle').textContent=S.title;
+document.getElementById('surroundDesc').textContent =S.desc;
+const sc=document.getElementById('surroundCards');
+S.cards.forEach(card=>{
+  sc.innerHTML+=`<div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group"><div class="aspect-video overflow-hidden"><img src="${card.image}" alt="${card.imageAlt}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/></div><div class="p-6"><div class="text-2xl mb-2">${card.icon}</div><h3 class="text-base font-bold text-gray-800 mb-2">${card.title}</h3><p class="text-gray-500 text-sm font-light leading-relaxed">${card.text}</p></div></div>`;
+});
+
+/* FAQ */
+const fl=document.getElementById('faqList');
+C.faq.forEach((item,i)=>{
+  const id=`faq${i}`;
+  fl.innerHTML+=`<div class="bg-white rounded-2xl border border-gray-200 overflow-hidden"><button onclick="toggleFaq('${id}')" class="w-full flex items-center justify-between p-5 text-right font-semibold text-gray-800 hover:bg-gray-50 transition-colors"><span>${item.question}</span><span id="fi${i}" class="faq-icon text-2xl font-light flex-shrink-0 mr-3" style="color:#2d4a2d">+</span></button><div id="${id}" class="faq-ans"><div class="px-5 pb-5 text-gray-600 font-light text-sm leading-relaxed border-t border-gray-100 pt-4">${item.answer}</div></div></div>`;
+});
+function toggleFaq(id){
+  const el=document.getElementById(id);
+  const idx=id.replace('faq','');
+  const icon=document.getElementById(`fi${idx}`);
+  const open=el.classList.contains('open');
+  document.querySelectorAll('.faq-ans').forEach(e=>e.classList.remove('open'));
+  document.querySelectorAll('.faq-icon').forEach(e=>e.classList.remove('open'));
+  if(!open){el.classList.add('open');icon.classList.add('open');}
+}
+
+/* CONTACT */
+document.getElementById('contactH').textContent  =C.contact.headline;
+document.getElementById('contactSub').textContent=C.contact.subline;
+document.getElementById('ctaPhone').textContent  =C.contact.phone;
+document.getElementById('ctaCall').href          =`tel:${C.contact.phone.replace(/[-\s]/g,'')}`;
+document.getElementById('ctaWaze').href          =C.contact.wazeLink;
+
+/* הצהרת נגישות — מוצגת ישירות ב-HTML */
+
+/* עוגיות — הוסרו */
+
+
+/* ════════════════════════════════════════════════════════════════════
+   LANGUAGE TOGGLE
+   ════════════════════════════════════════════════════════════════════ */
+let currentLang = 'he';
+
+function toggleLang() {
+  currentLang = currentLang === 'he' ? 'en' : 'he';
+  renderSite(currentLang === 'en' ? SITE_CONTENT_EN : SITE_CONTENT);
+  // Switch direction & lang
+  document.documentElement.lang = currentLang === 'en' ? 'en' : 'he';
+  document.getElementById('langToggleBtn').textContent = currentLang === 'en' ? 'עב' : 'EN';
+  document.getElementById('langToggleBtn').setAttribute('aria-label', currentLang === 'en' ? 'החלף לעברית' : 'Switch to English');
+  // Flip a11y widget side to match direction
+  const aBtn   = document.getElementById('a11y-btn');
+  const aPanel = document.getElementById('a11y-panel');
+  if (aBtn && aPanel) {
+    if (currentLang === 'en') {
+      aBtn.style.right   = '20px'; aBtn.style.left   = 'auto';
+      aPanel.style.right = '20px'; aPanel.style.left = 'auto';
+    } else {
+      aBtn.style.right   = '20px'; aBtn.style.left   = 'auto';
+      aPanel.style.right = '20px'; aPanel.style.left = 'auto';
+    }
+  }
+}
+
+function renderSite(C) {
+  const WA = `https://wa.me/${C.contact.whatsapp}`;
+
+  /* META */
+  document.getElementById('pageTitle').textContent = C.meta.title;
+  document.getElementById('pageDesc').content      = C.meta.description;
+  document.getElementById('ogTitle').content       = C.meta.title;
+  document.getElementById('ogDesc').content        = C.meta.description;
+
+  /* WA LINKS */
+  ['waFloat','navWa','heroCta','ctaWa'].forEach(id => {
+    const el = document.getElementById(id); if (el) el.href = WA;
+  });
+  const nwt = document.getElementById('navWaTxt');
+  if (nwt) nwt.textContent = currentLang === 'en' ? 'Book' : 'הזמינו';
+
+  /* HERO */
+  document.getElementById('heroBg').style.backgroundImage = `url('${C.hero.bgImage}')`;
+  document.getElementById('heroEyebrow').textContent  = C.hero.eyebrow;
+  document.getElementById('heroTitle').textContent    = C.hero.title;
+  document.getElementById('heroSubtitle').textContent = C.hero.subtitle;
+  document.getElementById('heroCtaTxt').textContent   = C.hero.ctaText;
+  /* stats */
+  const statsEl = document.getElementById('heroStats');
+  if (statsEl && C.hero.stats) {
+    statsEl.innerHTML = '';
+    C.hero.stats.forEach((s,i) => {
+      if (i>0) statsEl.innerHTML += '<div class="w-px h-8 bg-white/25"></div>';
+      statsEl.innerHTML += `<div><div class="text-3xl font-bold text-yellow-300">${s.num}</div><div class="text-sm text-white/75 mt-1">${s.label}</div></div>`;
+    });
+  }
+
+  /* FEATURES BAR */
+  const fb = document.getElementById('featBar');
+  if (fb) { fb.innerHTML = ''; C.keyFeatures.forEach(f => { fb.innerHTML += `<div class="flex items-center gap-2 text-sm font-medium text-white/90"><span class="text-xl">${f.icon}</span><span>${f.label}</span></div>`; }); }
+
+  /* ABOUT */
+  const mp = document.getElementById('mainParaEl'); if (mp) mp.textContent = C.mainParagraph;
+  const vn = document.getElementById('vineyardNoteEl'); if (vn) vn.innerHTML = `🍇 ${C.vineyardNote}`;
+
+  /* GALLERY BUTTON */
+  const gbt = document.getElementById('galleryBtnTxt');
+  if (gbt) gbt.textContent = galleryOpen
+    ? (currentLang === 'en' ? '✕ Hide gallery' : '✕ סגור גלריה')
+    : (currentLang === 'en' ? '📷 View all photos' : '📷 צפה בכל התמונות');
+
+  /* SURROUNDINGS */
+  const surroundLabel = document.getElementById('surroundLabel'); if (surroundLabel) surroundLabel.textContent = C.surroundings.label;
+  const surroundTitle = document.getElementById('surroundTitle'); if (surroundTitle) surroundTitle.textContent = C.surroundings.title;
+  const surroundDesc  = document.getElementById('surroundDesc');  if (surroundDesc)  surroundDesc.textContent  = C.surroundings.desc;
+  const sc2 = document.getElementById('surroundCards');
+  if (sc2) { sc2.innerHTML = ''; C.surroundings.cards.forEach(card => { sc2.innerHTML += `<div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow group"><div class="aspect-video overflow-hidden"><img src="${card.image}" alt="${card.imageAlt}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/></div><div class="p-6"><div class="text-2xl mb-2">${card.icon}</div><h3 class="text-base font-bold text-gray-800 mb-2">${card.title}</h3><p class="text-gray-500 text-sm font-light leading-relaxed">${card.text}</p></div></div>`; }); }
+
+  /* FAQ */
+  const faqEl = document.getElementById('faqList');
+  if (faqEl) { faqEl.innerHTML = ''; C.faq.forEach((item,i) => { const id=`faq${i}`; faqEl.innerHTML += `<div class="bg-white rounded-2xl border border-gray-200 overflow-hidden"><button onclick="toggleFaq('${id}')" class="w-full flex items-center justify-between p-5 text-right font-semibold text-gray-800 hover:bg-gray-50 transition-colors"><span>${item.question}</span><span id="fi${i}" class="faq-icon text-2xl font-light flex-shrink-0 mr-3" style="color:#2d4a2d">+</span></button><div id="${id}" class="faq-ans"><div class="px-5 pb-5 text-gray-600 font-light text-sm leading-relaxed border-t border-gray-100 pt-4">${item.answer}</div></div></div>`; }); }
+
+  /* CONTACT */
+  const ch = document.getElementById('contactH');   if (ch) ch.textContent = C.contact.headline;
+  const cs = document.getElementById('contactSub'); if (cs) cs.textContent = C.contact.subline;
+  const cp = document.getElementById('ctaPhone');   if (cp) cp.textContent = C.contact.phone;
+  const cc = document.getElementById('ctaCall');    if (cc) cc.href = `tel:${C.contact.phone.replace(/[-\s]/g,'')}`;
+  const cw = document.getElementById('ctaWaze');    if (cw) cw.href = C.contact.wazeLink;
+
+  /* NAV LINKS */
+  if (C.nav) {
+    const navMap = { about:'#about', cabins:'#cabins', garden:'#garden', location:'#location', faq:'#faq' };
+    Object.entries(navMap).forEach(([key, href]) => {
+      const el = document.querySelector(`#navLinks a[href="${href}"]`);
+      if (el && C.nav[key]) el.textContent = C.nav[key];
+    });
+    const set = (id, val) => { const el=document.getElementById(id); if(el&&val) el.textContent=val; };
+    /* Nav brand */
+    set('navBrandName', C.nav.brandName);
+    set('navBrandSub',  C.nav.brandSub);
+    /* Waze */
+    set('wazeText', C.nav.wazeText);
+  }
+
+  /* ABOUT section */
+  if (C.about) {
+    const set = (id, val) => { const el=document.getElementById(id); if(el&&val!==undefined) el.textContent=val; };
+    set('aboutLabel', C.about.label);
+    set('aboutTitle', C.about.title);
+    set('pill1', C.about.pill1);
+    set('pill2', C.about.pill2);
+    set('pill3', C.about.pill3);
+    set('pill4', C.about.pill4);
+  }
+
+  /* CAPACITY callout */
+  if (C.capacity) {
+    const set = (id, val) => { const el=document.getElementById(id); if(el&&val!==undefined) el.textContent=val; };
+    set('capTitleMain', C.capacity.titleMain);
+    set('capTitleSub',  C.capacity.titleSub);
+    set('capDesc',      C.capacity.desc);
+    set('capStat1',     C.capacity.stat1);
+    set('capStat2',     C.capacity.stat2);
+    set('capStat3',     C.capacity.stat3);
+  }
+
+  /* CABINS section */
+  if (C.cabins) {
+    const set = (id, val) => { const el=document.getElementById(id); if(el&&val!==undefined) el.textContent=val; };
+    set('cabinsLabel', C.cabins.label);
+    set('cabinsTitle', C.cabins.title);
+    set('cabinsDesc',  C.cabins.desc);
+    set('galleryHint', C.cabins.galleryHint);
+  }
+
+  /* GARDEN section */
+  if (C.garden) {
+    const set = (id, val) => { const el=document.getElementById(id); if(el&&val!==undefined) el.textContent=val; };
+    set('gardenLabel', C.garden.label);
+    set('gardenTitle', C.garden.title);
+    set('gardenDesc',  C.garden.desc);
+  }
+
+  /* WINE section */
+  if (C.wine) {
+    const set = (id, val) => { const el=document.getElementById(id); if(el&&val!==undefined) el.textContent=val; };
+    set('wineLabel', C.wine.label);
+    set('wineTitle', C.wine.title);
+    set('wineDesc',  C.wine.desc);
+  }
+
+  /* FAQ + CONTACT labels */
+  if (C.faqSection) { const el=document.getElementById('faqTitle'); if(el) el.textContent=C.faqSection.title; }
+  if (C.contactSection) { const el=document.getElementById('contactLabel'); if(el) el.textContent=C.contactSection.label; }
+
+  /* ABOUT badge */
+  if (C.about && C.about.badge) { const el=document.getElementById('aboutBadge'); if(el) el.textContent=C.about.badge; }
+
+  /* GARDEN list + pool cards */
+  if (C.garden) {
+    const s=(id,val)=>{const el=document.getElementById(id);if(el&&val!==undefined)el.textContent=val;};
+    s('gardenLi1',C.garden.li1); s('gardenLi2',C.garden.li2); s('gardenLi3',C.garden.li3);
+    s('gardenLi4',C.garden.li4); s('gardenLi5',C.garden.li5);
+    s('poolCard1L',C.garden.poolCard1L); s('poolCard1V',C.garden.poolCard1V);
+    s('poolCard2L',C.garden.poolCard2L); s('poolCard2V',C.garden.poolCard2V);
+    s('poolCard3L',C.garden.poolCard3L); s('poolCard3V',C.garden.poolCard3V);
+    s('poolCard4L',C.garden.poolCard4L); s('poolCard4V',C.garden.poolCard4V);
+  }
+
+  /* WINE quote */
+  if (C.wine && C.wine.quote) { const el=document.getElementById('wineQuote'); if(el) el.textContent=C.wine.quote; }
+
+  /* FOOTER */
+  if (C.footer) {
+    const s=(id,val)=>{const el=document.getElementById(id);if(el&&val)el.textContent=val;};
+    s('footerName',C.footer.name); s('footerSub',C.footer.sub); s('footerRights',C.footer.rights);
+  }
+
+  /* doc direction */
+  document.documentElement.dir = currentLang === 'en' ? 'ltr' : 'rtl';
+
+  /* re-observe reveal elements */
+  document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
+}
+
+/* STICKY NAV */
+const nav=document.getElementById('mainNav');
+const nb=document.getElementById('navBrand');
+const nl=document.getElementById('navLinks');
+window.addEventListener('scroll',()=>{
+  const s=scrollY>60;
+  nav.style.background    =s?'rgba(245,237,224,.96)':'transparent';
+  nav.style.backdropFilter=s?'blur(20px)':'none';
+  nav.style.boxShadow     =s?'0 1px 0 rgba(139,94,60,.15)':'none';
+  nb.style.color          =s?'#1a1a1a':'#fff';
+  if(nl)nl.querySelectorAll('a').forEach(a=>a.style.color=s?'#4b5563':'rgba(255,255,255,.8)');
+},{passive:true});
+
+/* LIGHTBOX */
+let lbSrcs=[],lbIdx=0;
+function openLB(idx,srcs){
+  lbSrcs=srcs;lbIdx=idx;
+  document.getElementById('lbImg').src=lbSrcs[lbIdx];
+  document.getElementById('lbCounter').textContent=`${lbIdx+1} / ${lbSrcs.length}`;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLB(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow='';}
+function nextLB(){lbIdx=(lbIdx+1)%lbSrcs.length;document.getElementById('lbImg').src=lbSrcs[lbIdx];document.getElementById('lbCounter').textContent=`${lbIdx+1} / ${lbSrcs.length}`;}
+function prevLB(){lbIdx=(lbIdx-1+lbSrcs.length)%lbSrcs.length;document.getElementById('lbImg').src=lbSrcs[lbIdx];document.getElementById('lbCounter').textContent=`${lbIdx+1} / ${lbSrcs.length}`;}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB();if(e.key==='ArrowLeft')nextLB();if(e.key==='ArrowRight')prevLB();});
+
+/* REVEAL */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:.09,rootMargin:'0px 0px -36px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+
+</script>
+
+
+<!-- ══════════════════════════════════════════════════════════════════
+     כפתור נגישות מלא — תקן ישראלי ת"י 5568 / WCAG 2.1 AA
+     גרסה 3.0 — מותאם מובייל + דסקטופ
+     ══════════════════════════════════════════════════════════════════ -->
+<script>
+(function(){
+'use strict';
+var CFG={lang:'he',primaryColor:'#2d4a2d',accentColor:'#3d6b3d',accessibilityStatementUrl:'#a11yStatement',organizationName:'בקתות צדיק כתמר'};
+var T={btnLabel:'נגישות',title:'אפשרויות נגישות',close:'סגור',reset:'איפוס',statement:'הצהרת נגישות',
+  fontSize:'גודל טקסט',fsSmall:'קטן',fsNormal:'רגיל',fsLarge:'גדול',fsXL:'גדול מאוד',
+  contrast:'ניגודיות',ctNormal:'רגיל',ctHigh:'גבוהה',ctDark:'כהה',ctYB:'צהוב/שחור',ctMono:'מונוכרום',ctInvert:'היפוך',
+  saturation:'רוויה',satNormal:'רגיל',satLow:'נמוכה',satHigh:'גבוהה',
+  fontFamily:'גופן',ffDefault:'ברירת מחדל',ffDys:'דיסלקציה',ffRead:'קריא',
+  textAlign:'יישור טקסט',taDefault:'ברירת מחדל',taLeft:'שמאל',taCenter:'מרכז',taRight:'ימין',
+  cursor:'סמן',curNormal:'רגיל',curBlack:'שחור גדול',curWhite:'לבן גדול',
+  spacing:'ריווח',lineSpace:'ריווח שורות',letterSpace:'ריווח אותיות',
+  highlights:'הדגשות',hlLinks:'קישורים',hlHeadings:'כותרות',hlFocus:'פוקוס',
+  reading:'עזרי קריאה',rdMask:'מסיכת קריאה',rdGuide:'סרגל קריאה',rdZoom:'זכוכית מגדלת',rdPage:'הגדלת תצוגה',
+  other:'כללי',noAnim:'עצירת אנימציות',noImg:'הסתרת תמונות',
+  skipLink:'דלג לתוכן ראשי',
+  desktopOnly:'(דסקטופ בלבד)'};
+
+var STORAGE_KEY='a11y_tzadik_v3';
+var isMobile=('ontouchstart' in window)||window.innerWidth<768;
+var def={fontSize:'normal',contrast:'normal',saturation:'normal',fontFamily:'default',textAlign:'default',cursor:'normal',lineSpacing:false,letterSpacing:false,links:false,headings:false,focusOutline:false,animations:true,hideImages:false,readingMask:false,readingGuide:false,textZoom:false,pageZoom:false,open:false};
+function loadState(){try{var s=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');return Object.assign({},def,s,{open:false,readingMask:false,readingGuide:false,textZoom:false});}catch(e){return Object.assign({},def);}}
+function saveState(s){try{var t=Object.assign({},s);delete t.open;localStorage.setItem(STORAGE_KEY,JSON.stringify(t));}catch(e){}}
+var state=loadState();
+var p=CFG.primaryColor,ac=CFG.accentColor;
+
+/* ── CSS ── */
+var css=[
+/* skip link */
+'#a11y-skip{position:absolute;right:12px;top:-100px;z-index:2147483647;background:'+p+';color:#fff;padding:10px 20px;border-radius:6px;font-size:16px;font-weight:700;text-decoration:none;transition:top .2s;font-family:Assistant,sans-serif}',
+'#a11y-skip:focus{top:12px;outline:3px solid #fff;outline-offset:2px}',
+
+/* ── TRIGGER BUTTON — responsive ── */
+/* desktop: label + icon */
+'#a11y-btn{position:fixed;right:20px;bottom:20px;z-index:2147483646;background:'+p+';color:#fff;border:none;border-radius:50px;padding:11px 18px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;box-shadow:0 4px 18px rgba(0,0,0,.3);direction:rtl;font-family:Assistant,sans-serif;transition:transform .15s,box-shadow .15s;-webkit-tap-highlight-color:transparent}',
+'#a11y-btn:hover{background:'+ac+';transform:translateY(-2px);box-shadow:0 6px 22px rgba(0,0,0,.35)}',
+'#a11y-btn:active{transform:scale(.96)}',
+'#a11y-btn:focus-visible{outline:3px solid #fff;outline-offset:3px}',
+'#a11y-btn svg{width:20px;height:20px;flex-shrink:0}',
+/* mobile: round icon-only button, smaller */
+'@media(max-width:767px){#a11y-btn{width:48px;height:48px;padding:0;border-radius:50%;justify-content:center;bottom:80px}}',
+'@media(max-width:767px){#a11y-btn-label{display:none}}',
+
+/* ── PANEL — responsive ── */
+'#a11y-panel{position:fixed;right:20px;bottom:72px;z-index:2147483645;width:310px;max-height:82vh;overflow-y:auto;overflow-x:hidden;background:#fff;border-radius:14px;box-shadow:0 8px 40px rgba(0,0,0,.22);direction:rtl;font-family:Assistant,sans-serif;display:none;-webkit-overflow-scrolling:touch}',
+'#a11y-panel[aria-hidden="false"]{display:block}',
+/* mobile: full-width bottom sheet */
+'@media(max-width:767px){#a11y-panel{right:0;left:0;bottom:0;width:100%;max-height:75vh;border-radius:20px 20px 0 0;box-shadow:0 -4px 30px rgba(0,0,0,.18)}}',
+
+/* panel header */
+'#a11y-ph{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 11px;background:'+p+';border-radius:14px 14px 0 0;position:sticky;top:0;z-index:1}',
+'@media(max-width:767px){#a11y-ph{border-radius:20px 20px 0 0;padding:12px 16px 10px}}',
+'#a11y-ph h2{color:#fff;font-size:15px;font-weight:700;margin:0;font-family:Assistant,sans-serif}',
+'#a11y-pacts{display:flex;gap:7px;align-items:center}',
+'#a11y-rst,#a11y-cls{background:rgba(255,255,255,.2);color:#fff;border:1px solid rgba(255,255,255,.38);border-radius:7px;padding:4px 12px;font-size:12px;cursor:pointer;font-weight:700;font-family:Assistant,sans-serif;min-height:32px;-webkit-tap-highlight-color:transparent}',
+'#a11y-rst:hover,#a11y-cls:hover{background:rgba(255,255,255,.35)}',
+'#a11y-rst:focus-visible,#a11y-cls:focus-visible{outline:2px solid #fff;outline-offset:2px}',
+
+/* drag handle on mobile */
+'#a11y-drag{display:none;width:36px;height:4px;background:rgba(255,255,255,.5);border-radius:2px;margin:0 auto 8px}',
+'@media(max-width:767px){#a11y-drag{display:block}}',
+
+/* body */
+'#a11y-body{padding:12px}',
+'@media(max-width:767px){#a11y-body{padding:10px 12px 24px}}',
+'.a11s{margin-bottom:14px}',
+'.a11sl{font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid #f3f4f6}',
+'.a11os{display:flex;flex-wrap:wrap;gap:6px}',
+/* options — bigger tap targets on mobile */
+'.a11o{background:#f3f4f6;color:#374151;border:1.5px solid #e5e7eb;border-radius:8px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;transition:background .13s,border-color .13s;font-family:Assistant,sans-serif;min-height:36px;-webkit-tap-highlight-color:transparent}',
+'@media(max-width:767px){.a11o{min-height:44px;padding:8px 14px;font-size:13px}}',
+'.a11o:hover{background:#e8eae8;border-color:#9ca3af}',
+'.a11o:active{transform:scale(.97)}',
+'.a11o.on{background:'+p+';color:#fff;border-color:'+p+'}',
+'.a11o:focus-visible{outline:2px solid '+p+';outline-offset:2px}',
+/* desktop-only badge */
+'.a11o.desktop-only{opacity:.5;pointer-events:none}',
+'.a11o.desktop-only::after{content:" *";font-size:10px}',
+/* toggles */
+'.a11tr{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f3f4f6}',
+'.a11tr:last-child{border:none}',
+'@media(max-width:767px){.a11tr{padding:10px 0}}',
+'.a11tl{font-size:13px;color:#374151;font-weight:500;font-family:Assistant,sans-serif}',
+'.a11sw{position:relative;width:44px;height:24px;flex-shrink:0}',
+'.a11sw input{opacity:0;width:0;height:0;position:absolute}',
+'.a11tk{position:absolute;inset:0;background:#d1d5db;border-radius:24px;cursor:pointer;transition:background .2s;-webkit-tap-highlight-color:transparent}',
+'.a11sw input:checked+.a11tk{background:'+p+'}',
+'.a11tk::after{content:"";position:absolute;width:18px;height:18px;background:#fff;border-radius:50%;top:3px;right:3px;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}',
+'.a11sw input:checked+.a11tk::after{transform:translateX(-20px)}',
+'.a11sw input:focus-visible+.a11tk{outline:2px solid '+p+';outline-offset:2px}',
+/* statement link */
+'#a11y-stmtlnk{display:block;text-align:center;padding:10px;margin-top:4px;background:#f9fafb;border-radius:8px;color:'+p+';font-size:12px;font-weight:700;text-decoration:none;border:1px solid #e5e7eb;font-family:Assistant,sans-serif;min-height:40px;display:flex;align-items:center;justify-content:center}',
+'#a11y-stmtlnk:hover{background:#f3f4f6;text-decoration:underline}',
+'#a11y-stmtlnk:focus-visible{outline:2px solid '+p+';outline-offset:2px}',
+
+/* ── Desktop-only reading tools ── */
+'#a11y-rmask{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:2147483640;pointer-events:none}',
+'#a11y-rmask.on{display:block}',
+'#a11y-rmask-top,#a11y-rmask-bot{position:absolute;left:0;right:0;background:rgba(0,0,0,.6)}',
+'#a11y-rmask-top{top:0}','#a11y-rmask-bot{bottom:0}',
+'#a11y-rguide{display:none;position:fixed;left:0;right:0;height:2px;background:'+p+';z-index:2147483641;pointer-events:none;box-shadow:0 0 8px rgba(45,74,45,.5)}',
+'#a11y-rguide.on{display:block}',
+'#a11y-loupe{display:none;position:fixed;z-index:2147483643;background:#fff;border:2px solid '+p+';border-radius:8px;padding:8px 14px;font-size:22px!important;max-width:300px;pointer-events:none;box-shadow:0 4px 16px rgba(0,0,0,.2);font-family:Assistant,sans-serif;color:#111;line-height:1.4}',
+'#a11y-loupe.on{display:block}',
+
+/* ── Applied HTML classes ── */
+'html.a11f-small *:not(#a11y-panel):not(#a11y-panel *):not(#a11y-btn):not(#a11y-btn *){font-size:85%!important}',
+'html.a11f-large *:not(#a11y-panel):not(#a11y-panel *):not(#a11y-btn):not(#a11y-btn *){font-size:120%!important}',
+'html.a11f-xl *:not(#a11y-panel):not(#a11y-panel *):not(#a11y-btn):not(#a11y-btn *){font-size:148%!important}',
+'html.a11c-high *:not(#a11y-panel):not(#a11y-panel *):not(#a11y-btn):not(#a11y-btn *){background-color:#fff!important;color:#000!important;border-color:#000!important}',
+'html.a11c-high a:not(#a11y-panel *){color:#00008b!important}',
+'html.a11c-dark body{background:#111!important}',
+'html.a11c-dark *:not(#a11y-panel):not(#a11y-panel *):not(#a11y-btn):not(#a11y-btn *){background-color:#111!important;color:#e0e0e0!important;border-color:#444!important}',
+'html.a11c-dark a:not(#a11y-panel *){color:#7db3ff!important}',
+'html.a11c-yb *:not(#a11y-panel):not(#a11y-panel *):not(#a11y-btn):not(#a11y-btn *){background-color:#000!important;color:#ff0!important;border-color:#ff0!important}',
+'html.a11c-mono *:not(#a11y-panel):not(#a11y-panel *):not(#a11y-btn):not(#a11y-btn *){filter:grayscale(100%)!important}',
+'html.a11c-invert *:not(#a11y-panel):not(#a11y-panel *):not(#a11y-btn):not(#a11y-btn *){filter:invert(100%)!important}',
+'html.a11sat-low *:not(#a11y-panel):not(#a11y-panel *){filter:saturate(30%)!important}',
+'html.a11sat-high *:not(#a11y-panel):not(#a11y-panel *){filter:saturate(200%)!important}',
+'@font-face{font-family:"OpenDyslexic";src:url("https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/fonts/OpenDyslexic-Regular.otf") format("opentype")}',
+'html.a11ff-dys *:not(#a11y-panel):not(#a11y-panel *):not(#a11y-btn):not(#a11y-btn *){font-family:"OpenDyslexic",serif!important;letter-spacing:.05em!important;word-spacing:.15em!important}',
+'html.a11ff-read *:not(#a11y-panel):not(#a11y-panel *):not(#a11y-btn):not(#a11y-btn *){font-family:Georgia,"Times New Roman",serif!important;line-height:1.75!important}',
+'html.a11-ls *:not(#a11y-panel *){line-height:2.1!important;letter-spacing:.04em!important}',
+'html.a11-ltr *:not(#a11y-panel *){letter-spacing:.12em!important}',
+'html.a11ta-left *:not(#a11y-panel *){text-align:left!important}',
+'html.a11ta-center *:not(#a11y-panel *){text-align:center!important}',
+'html.a11ta-right *:not(#a11y-panel *){text-align:right!important}',
+'html.a11-cur-black,html.a11-cur-black *{cursor:url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 32 32\'%3E%3Cpath d=\'M8 4L8 26L13 20L17 28L20 27L16 19L23 19Z\' fill=\'%23000\' stroke=\'%23fff\' stroke-width=\'2\'/%3E%3C/svg%3E") 8 4,auto!important}',
+'html.a11-cur-white,html.a11-cur-white *{cursor:url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 32 32\'%3E%3Cpath d=\'M8 4L8 26L13 20L17 28L20 27L16 19L23 19Z\' fill=\'%23fff\' stroke=\'%23000\' stroke-width=\'2\'/%3E%3C/svg%3E") 8 4,auto!important}',
+'html.a11-links a:not(#a11y-panel *){text-decoration:underline!important;text-underline-offset:3px!important;border-bottom:2px solid currentColor!important;font-weight:700!important}',
+'html.a11-headings h1:not(#a11y-panel *),html.a11-headings h2:not(#a11y-panel *),html.a11-headings h3:not(#a11y-panel *),html.a11-headings h4:not(#a11y-panel *),html.a11-headings h5:not(#a11y-panel *),html.a11-headings h6:not(#a11y-panel *){border-bottom:2px solid '+p+'!important;padding-bottom:4px!important;text-decoration:underline!important;text-decoration-color:'+p+'!important}',
+'html.a11-focus *:focus:not(#a11y-panel *){outline:3px solid '+p+'!important;outline-offset:3px!important;box-shadow:0 0 0 5px rgba(45,74,45,.25)!important}',
+'html.a11-noanim *:not(#a11y-panel *){animation:none!important;transition:none!important;animation-duration:0s!important;transition-duration:0s!important}',
+'html.a11-noimg img:not(#a11y-panel *){visibility:hidden!important}',
+'html.a11-zoom-125{zoom:1.25}',
+].join('');
+
+var st=document.createElement('style');st.id='a11y-styles';st.textContent=css;document.head.appendChild(st);
+
+/* ── SKIP LINK ── */
+var sk=document.createElement('a');sk.id='a11y-skip';sk.href='#main-content';sk.textContent=T.skipLink;sk.setAttribute('tabindex','1');
+document.body.insertBefore(sk,document.body.firstChild);
+if(!document.getElementById('main-content')){var m=document.querySelector('main')||document.querySelector('[role="main"]')||document.querySelector('section');if(m&&!m.id)m.id='main-content';}
+
+/* ── READING TOOLS (desktop only — hover-based) ── */
+var rmask=document.createElement('div');rmask.id='a11y-rmask';
+rmask.innerHTML='<div id="a11y-rmask-top"></div><div id="a11y-rmask-bot"></div>';
+document.body.appendChild(rmask);
+var rtop=document.getElementById('a11y-rmask-top');
+var rbot=document.getElementById('a11y-rmask-bot');
+var rguide=document.createElement('div');rguide.id='a11y-rguide';document.body.appendChild(rguide);
+var loupe=document.createElement('div');loupe.id='a11y-loupe';loupe.setAttribute('aria-live','polite');document.body.appendChild(loupe);
+
+if(!isMobile){
+  var MASK_H=80;
+  document.addEventListener('mousemove',function(e){
+    if(state.readingMask){rtop.style.height=Math.max(0,e.clientY-MASK_H/2)+'px';rbot.style.height=Math.max(0,window.innerHeight-(e.clientY+MASK_H/2))+'px';}
+    if(state.readingGuide)rguide.style.top=e.clientY+'px';
+  });
+  document.addEventListener('mouseover',function(e){
+    if(!state.textZoom)return;
+    var el=e.target;if(!el||el.closest('#a11y-panel')||el.closest('#a11y-btn')||!el.textContent)return;
+    var txt=el.textContent.trim().slice(0,80);if(txt.length>2){loupe.textContent=txt;loupe.classList.add('on');}
+  });
+  document.addEventListener('mousemove',function(e){
+    if(!state.textZoom)return;
+    var x=e.clientX+18,y=e.clientY-50;
+    if(x+320>window.innerWidth)x=e.clientX-330;if(y<10)y=e.clientY+20;
+    loupe.style.left=x+'px';loupe.style.top=y+'px';
+  });
+  document.addEventListener('mouseout',function(){if(state.textZoom)loupe.classList.remove('on');});
+}
+
+/* ── BUILD DOM ── */
+var iconSVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="1.5"/><path d="M12 7v5"/><path d="M9 10h6"/><path d="M7 20l3-6"/><path d="M17 20l-3-6"/></svg>';
+var btn=document.createElement('button');
+btn.id='a11y-btn';btn.setAttribute('aria-label',T.btnLabel);btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-controls','a11y-panel');
+btn.innerHTML=iconSVG+'<span id="a11y-btn-label">'+T.btnLabel+'</span>';
+document.body.appendChild(btn);
+
+var panel=document.createElement('div');
+panel.id='a11y-panel';panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','false');panel.setAttribute('aria-label',T.title);panel.setAttribute('aria-hidden','true');
+
+function bOpt(g,v,lbl,desktopOnly){return '<button class="a11o'+(desktopOnly&&isMobile?' desktop-only':'')+'" data-a="'+g+'" data-v="'+v+'" aria-pressed="false">'+lbl+'</button>';}
+function bTog(key,label,checked,desktopOnly){
+  if(desktopOnly&&isMobile)return '';
+  var id='a11t-'+key;
+  return '<div class="a11tr"><label for="'+id+'" class="a11tl">'+label+'</label><label class="a11sw"><input type="checkbox" id="'+id+'" data-toggle="'+key+'"'+(checked?' checked':'')+'><span class="a11tk"></span></label></div>';
+}
+function bSec(label,content){return '<div class="a11s"><div class="a11sl">'+label+'</div>'+content+'</div>';}
+
+panel.innerHTML=
+  '<div id="a11y-ph"><div id="a11y-drag" aria-hidden="true"></div><h2>'+T.title+'</h2><div id="a11y-pacts"><button id="a11y-rst" type="button">'+T.reset+'</button><button id="a11y-cls" type="button" aria-label="'+T.close+'"><span aria-hidden="true">&#x2715;</span></button></div></div>'+
+  '<div id="a11y-body">'+
+  bSec(T.fontSize,
+    '<div class="a11os">'+bOpt('fontSize','small',T.fsSmall)+bOpt('fontSize','normal',T.fsNormal)+bOpt('fontSize','large',T.fsLarge)+bOpt('fontSize','xl',T.fsXL)+'</div>')+
+  bSec(T.contrast,
+    '<div class="a11os">'+bOpt('contrast','normal',T.ctNormal)+bOpt('contrast','high',T.ctHigh)+bOpt('contrast','dark',T.ctDark)+bOpt('contrast','yb',T.ctYB)+bOpt('contrast','mono',T.ctMono)+bOpt('contrast','invert',T.ctInvert)+'</div>')+
+  bSec(T.saturation,
+    '<div class="a11os">'+bOpt('saturation','normal',T.satNormal)+bOpt('saturation','low',T.satLow)+bOpt('saturation','high',T.satHigh)+'</div>')+
+  bSec(T.fontFamily,
+    '<div class="a11os">'+bOpt('fontFamily','default',T.ffDefault)+bOpt('fontFamily','dyslexia',T.ffDys)+bOpt('fontFamily','readable',T.ffRead)+'</div>')+
+  bSec(T.textAlign,
+    '<div class="a11os">'+bOpt('textAlign','default',T.taDefault)+bOpt('textAlign','left',T.taLeft)+bOpt('textAlign','center',T.taCenter)+bOpt('textAlign','right',T.taRight)+'</div>')+
+  (!isMobile ? bSec(T.cursor,
+    '<div class="a11os">'+bOpt('cursor','normal',T.curNormal)+bOpt('cursor','black',T.curBlack)+bOpt('cursor','white',T.curWhite)+'</div>') : '')+
+  bSec(T.spacing,
+    bTog('lineSpacing',T.lineSpace,state.lineSpacing)+
+    bTog('letterSpacing',T.letterSpace,state.letterSpacing))+
+  bSec(T.highlights,
+    bTog('links',T.hlLinks,state.links)+
+    bTog('headings',T.hlHeadings,state.headings)+
+    bTog('focusOutline',T.hlFocus,state.focusOutline))+
+  (!isMobile ? bSec(T.reading,
+    bTog('readingMask',T.rdMask,false)+
+    bTog('readingGuide',T.rdGuide,false)+
+    bTog('textZoom',T.rdZoom,false)+
+    bTog('pageZoom',T.rdPage,state.pageZoom)) :
+    bSec(T.reading, bTog('pageZoom',T.rdPage,state.pageZoom)))+
+  bSec(T.other,
+    bTog('animations',T.noAnim,!state.animations)+
+    bTog('hideImages',T.noImg,state.hideImages))+
+  '<a id="a11y-stmtlnk" href="'+CFG.accessibilityStatementUrl+'">'+T.statement+'</a>'+
+  '</div>';
+document.body.appendChild(panel);
+
+/* ── APPLY STATE ── */
+var H=document.documentElement;
+function applyAll(){
+  var fsCls=['a11f-small','a11f-large','a11f-xl'];
+  fsCls.forEach(function(c){H.classList.remove(c);});
+  if(state.fontSize==='small')H.classList.add('a11f-small');
+  if(state.fontSize==='large')H.classList.add('a11f-large');
+  if(state.fontSize==='xl')H.classList.add('a11f-xl');
+
+  ['a11c-high','a11c-dark','a11c-yb','a11c-mono','a11c-invert'].forEach(function(c){H.classList.remove(c);});
+  if(state.contrast==='high')H.classList.add('a11c-high');
+  if(state.contrast==='dark')H.classList.add('a11c-dark');
+  if(state.contrast==='yb')H.classList.add('a11c-yb');
+  if(state.contrast==='mono')H.classList.add('a11c-mono');
+  if(state.contrast==='invert')H.classList.add('a11c-invert');
+
+  ['a11sat-low','a11sat-high'].forEach(function(c){H.classList.remove(c);});
+  if(state.saturation==='low')H.classList.add('a11sat-low');
+  if(state.saturation==='high')H.classList.add('a11sat-high');
+
+  ['a11ff-dys','a11ff-read'].forEach(function(c){H.classList.remove(c);});
+  if(state.fontFamily==='dyslexia')H.classList.add('a11ff-dys');
+  if(state.fontFamily==='readable')H.classList.add('a11ff-read');
+
+  ['a11ta-left','a11ta-center','a11ta-right'].forEach(function(c){H.classList.remove(c);});
+  if(state.textAlign==='left')H.classList.add('a11ta-left');
+  if(state.textAlign==='center')H.classList.add('a11ta-center');
+  if(state.textAlign==='right')H.classList.add('a11ta-right');
+
+  if(!isMobile){
+    ['a11-cur-black','a11-cur-white'].forEach(function(c){H.classList.remove(c);});
+    if(state.cursor==='black')H.classList.add('a11-cur-black');
+    if(state.cursor==='white')H.classList.add('a11-cur-white');
+    rmask.classList.toggle('on',state.readingMask);
+    rguide.classList.toggle('on',state.readingGuide);
+    if(!state.textZoom)loupe.classList.remove('on');
+  }
+
+  H.classList.toggle('a11-ls',state.lineSpacing);
+  H.classList.toggle('a11-ltr',state.letterSpacing);
+  H.classList.toggle('a11-links',state.links);
+  H.classList.toggle('a11-headings',state.headings);
+  H.classList.toggle('a11-focus',state.focusOutline);
+  H.classList.toggle('a11-noanim',!state.animations);
+  H.classList.toggle('a11-noimg',state.hideImages);
+
+  H.classList.remove('a11-zoom-125');
+  if(state.pageZoom)H.classList.add('a11-zoom-125');
+
+  syncUI();saveState(state);
+}
+
+function syncUI(){
+  panel.querySelectorAll('.a11o').forEach(function(b){
+    var active=state[b.getAttribute('data-a')]===b.getAttribute('data-v');
+    b.classList.toggle('on',active);b.setAttribute('aria-pressed',active?'true':'false');
+  });
+  panel.querySelectorAll('[data-toggle]').forEach(function(inp){
+    var k=inp.getAttribute('data-toggle');
+    inp.checked=(k==='animations')?!state.animations:!!state[k];
+  });
+}
+
+/* ── OPEN / CLOSE ── */
+function openPanel(){
+  state.open=true;
+  panel.setAttribute('aria-hidden','false');
+  btn.setAttribute('aria-expanded','true');
+  var c=panel.querySelector('#a11y-cls');if(c)c.focus();
+}
+function closePanel(){
+  state.open=false;
+  panel.setAttribute('aria-hidden','true');
+  btn.setAttribute('aria-expanded','false');
+  btn.focus();
+}
+
+btn.addEventListener('click',function(){state.open?closePanel():openPanel();});
+
+/* touch: swipe down on mobile panel to close */
+var touchStartY=0;
+panel.addEventListener('touchstart',function(e){touchStartY=e.touches[0].clientY;},{passive:true});
+panel.addEventListener('touchmove',function(e){
+  if(panel.scrollTop===0&&e.touches[0].clientY-touchStartY>60)closePanel();
+},{passive:true});
+
+panel.addEventListener('click',function(e){
+  var ob=e.target.closest('.a11o');
+  if(ob&&!ob.classList.contains('desktop-only')){state[ob.getAttribute('data-a')]=ob.getAttribute('data-v');applyAll();return;}
+  if(e.target.id==='a11y-cls'||e.target.closest('#a11y-cls')){closePanel();return;}
+  if(e.target.id==='a11y-rst'||e.target.closest('#a11y-rst')){var op=state.open;state=Object.assign({},def,{open:op});applyAll();return;}
+});
+
+panel.addEventListener('change',function(e){
+  var inp=e.target;if(!inp.hasAttribute('data-toggle'))return;
+  var k=inp.getAttribute('data-toggle');
+  if(k==='animations')state.animations=!inp.checked;else state[k]=inp.checked;
+  applyAll();
+});
+
+/* keyboard */
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'&&state.open){closePanel();return;}
+  if(e.key==='F10'){state.open?closePanel():openPanel();return;}
+  if(!state.open||e.key!=='Tab')return;
+  var focusable=panel.querySelectorAll('button:not([disabled]),input:not([disabled]),a[href],[tabindex]:not([tabindex="-1"])');
+  var first=focusable[0],last=focusable[focusable.length-1];
+  if(!focusable.length)return;
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+});
+
+/* close on outside click/tap */
+document.addEventListener('mousedown',function(e){
+  if(state.open&&!panel.contains(e.target)&&!btn.contains(e.target))closePanel();
+});
+document.addEventListener('touchend',function(e){
+  if(state.open&&!panel.contains(e.target)&&!btn.contains(e.target))closePanel();
+},{passive:true});
+
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  if(state.animations===true&&!localStorage.getItem(STORAGE_KEY))state.animations=false;
+}
+applyAll();
+})();
+</script>
+
+
+</body>
+</html>
