@@ -237,11 +237,11 @@ const SITE_CONTENT = {
   capacity: {
     titleMain:'מרחב לכל המשפחה — ', titleSub:'זוג + עד 7 ילדים',
     desc:'נדיר למצוא מקום ברמת הגולן שמתאים למשפחה גדולה. אצלנו — זה בדיוק מה שבנינו.',
-    stat1:"חדר שינה זוגי + ג'קוזי", stat2:'מזרנים בגלריה לילדים', stat3:'אורחים סה״כ לכל בקתה',
+    stat1:"חדר שינה זוגי | ג'קוזי", stat2:'מזרנים בגלריה לילדים', stat3:'אורחים סה״כ לכל בקתה',
   },
   cabins: {
     label:'הבקתות והגינה', title:'עץ חמים. תקרות גבוהות. אור טוב.',
-    desc:"חדר שינה זוגי וג'קוזי פרטי בקומה תחתונה — גלריה מרווחת לילדים מעל.",
+    desc:"חדר שינה זוגי וג'קוזי פרטי — שניים נפרדים בקומה תחתונה — גלריה מרווחת לילדים מעל.",
     galleryHint:'← גלול ימינה לראות יותר תמונות',
   },
   garden: {
@@ -386,11 +386,11 @@ const SITE_CONTENT_EN = {
   capacity: {
     titleMain:'Space for the whole family — ', titleSub:'couple + up to 7 children',
     desc:"It's rare to find a place in the Golan that fits a large family. Here — that's exactly what we built.",
-    stat1:'Double bedroom + jacuzzi', stat2:'Loft mattresses for kids', stat3:'Guests total per cabin',
+    stat1:'Double bedroom | Jacuzzi', stat2:'Loft mattresses for kids', stat3:'Guests total per cabin',
   },
   cabins: {
     label:'The Cabins & Garden', title:'Warm wood. High ceilings. Good light.',
-    desc:"Private double bedroom and jacuzzi on the ground floor — a spacious loft for kids above.",
+    desc:"Private double bedroom and jacuzzi on the ground floor — separate spaces — a spacious loft for kids above.",
     galleryHint:'← Scroll right to see more photos',
   },
   garden: {
@@ -545,7 +545,7 @@ const SITE_CONTENT_EN = {
     <h2 id="capTitle" class="text-3xl md:text-5xl font-bold mb-3"><span id="capTitleMain">מרחב לכל המשפחה — </span><span class="text-yellow-300" id="capTitleSub">זוג + עד 7 ילדים</span></h2>
     <p id="capDesc" class="text-white/80 text-lg mb-10 font-light">נדיר למצוא מקום ברמת הגולן שמתאים למשפחה גדולה. אצלנו — זה בדיוק מה שבנינו.</p>
     <div class="grid grid-cols-3 divide-x divide-x-reverse border rounded-2xl overflow-hidden max-w-2xl mx-auto" style="border-color:rgba(255,255,255,.2)">
-      <div class="py-7"><div class="text-4xl font-bold text-yellow-300">1</div><div id="capStat1" class="text-sm text-white/70 mt-2">חדר שינה זוגי + ג'קוזי</div></div>
+      <div class="py-7"><div class="text-4xl font-bold text-yellow-300">1</div><div id="capStat1" class="text-sm text-white/70 mt-2">חדר שינה זוגי | ג'קוזי</div></div>
       <div class="py-7"><div class="text-4xl font-bold text-yellow-300">7</div><div id="capStat2" class="text-sm text-white/70 mt-2">מזרנים בגלריה לילדים</div></div>
       <div class="py-7"><div class="text-4xl font-bold text-yellow-300">9</div><div id="capStat3" class="text-sm text-white/70 mt-2">אורחים סה״כ לכל בקתה</div></div>
     </div>
@@ -557,7 +557,7 @@ const SITE_CONTENT_EN = {
   <div class="max-w-5xl mx-auto px-6 md:px-10">
     <div id="cabinsLabel" class="sec-label reveal">הבקתות והגינה</div>
     <h2 id="cabinsTitle" class="text-3xl md:text-4xl font-bold text-gray-800 mb-3 reveal">עץ חמים. תקרות גבוהות. אור טוב.</h2>
-    <p id="cabinsDesc" class="text-gray-500 text-lg font-light mb-8 reveal">חדר שינה זוגי וג'קוזי פרטי בקומה תחתונה — גלריה מרווחת לילדים מעל.</p>
+    <p id="cabinsDesc" class="text-gray-500 text-lg font-light mb-8 reveal">חדר שינה זוגי וג'קוזי פרטי — שניים נפרדים בקומה תחתונה — גלריה מרווחת לילדים מעל.</p>
     <div id="showcaseGrid" class="grid md:grid-cols-3 gap-4 mb-6 reveal"></div>
     <div class="text-center reveal">
       <button onclick="toggleGallery()" id="galleryToggleBtn"
@@ -660,10 +660,7 @@ const SITE_CONTENT_EN = {
         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C5.7 9.7 5 10.4 5 11.9s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4A10 10 0 0 0 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
         שלחו לנו וואטסאפ
       </a>
-      <a id="ctaCall" href="#" class="inline-flex items-center gap-3 bg-white/15 border border-white/35 text-white font-semibold text-lg px-10 py-5 rounded-full hover:bg-white/25 transition-all">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
-        <span id="ctaPhone"></span>
-      </a>
+
     </div>
     <a id="ctaWaze" href="#" target="_blank" rel="noopener" class="text-white/55 text-sm hover:text-white transition-colors reveal">📍 <span id="wazeText">נווטו אלינו בוויז</span></a>
   </div>
@@ -714,13 +711,13 @@ const SITE_CONTENT_EN = {
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4C5.7 9.7 5 10.4 5 11.9s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.4 5L2 22l5.2-1.4A10 10 0 0 0 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
             וואטסאפ — 054-606-6674
           </a>
-          <a href="tel:0546066674"
-             class="inline-flex items-center gap-2 bg-forest text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-forest-mid transition-colors">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.58 3.44 2 2 0 0 1 3.55 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 6.29 6.29l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            שיחת טלפון
-          </a>
         </div>
         <p class="mt-3 text-xs text-gray-400">נטפל בפנייתכם בהקדם האפשרי ולא יאוחר מ-5 ימי עסקים.</p>
+      </div>
+
+      <div class="border-t border-gray-200 pt-4">
+        <h3 class="font-bold text-gray-800 text-base mb-2">שירותי צד שלישי — ניווט Waze</h3>
+        <p>אתר זה כולל קישור לשירות הניווט Waze לצורך הגעה למושב נוב. שירות זה מופעל על ידי Waze Mobile Ltd., שהיא חברה עצמאית שאינה קשורה לבקתות צדיק כתמר. אנו אינם אחראים לנגישות, לתוכן, לפונקציונליות, לדיוק המידע, או לכל כשל טכני של שירות זה. לפנייה בנושאי נגישות של אפליקציית Waze יש לפנות ישירות לחברת Waze.</p>
       </div>
 
       <div class="border-t border-gray-200 pt-4">
@@ -845,8 +842,6 @@ function toggleFaq(id){
 /* CONTACT */
 document.getElementById('contactH').textContent  =C.contact.headline;
 document.getElementById('contactSub').textContent=C.contact.subline;
-document.getElementById('ctaPhone').textContent  =C.contact.phone;
-document.getElementById('ctaCall').href          =`tel:${C.contact.phone.replace(/[-\s]/g,'')}`;
 document.getElementById('ctaWaze').href          =C.contact.wazeLink;
 
 /* הצהרת נגישות — מוצגת ישירות ב-HTML */
@@ -940,8 +935,6 @@ function renderSite(C) {
   /* CONTACT */
   const ch = document.getElementById('contactH');   if (ch) ch.textContent = C.contact.headline;
   const cs = document.getElementById('contactSub'); if (cs) cs.textContent = C.contact.subline;
-  const cp = document.getElementById('ctaPhone');   if (cp) cp.textContent = C.contact.phone;
-  const cc = document.getElementById('ctaCall');    if (cc) cc.href = `tel:${C.contact.phone.replace(/[-\s]/g,'')}`;
   const cw = document.getElementById('ctaWaze');    if (cw) cw.href = C.contact.wazeLink;
 
   /* NAV LINKS */
