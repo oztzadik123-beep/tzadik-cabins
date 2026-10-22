@@ -73,19 +73,7 @@ window.PLACES = [
     maps: "https://www.google.com/maps/search/?api=1&query=32.7934094,35.6770446"
   },
   {
-    // A further Givat Yoav café is not confirmed. Do not add a placeholder card.
-    category: "קפה",
-    categoryEn: "Coffee",
-    name: "עגלת קפה יואבה",
-    nameEn: "Yoava coffee cart",
-    minutes: 17,
-    timeHe: "כ-17 דקות נסיעה",
-    timeEn: "About 17 min drive",
-    he: "עגלת קפה בגבעת יואב, עם נוף לכנרת. שעות הפתיחה משתנות ולא מפורסמות כאן. כדאי לבדוק לפני שמגיעים.",
-    en: "A coffee cart in Givat Yoav, with a view of the Kinneret. Opening hours change and are not listed here. Check before you go.",
-    maps: "https://www.google.com/maps/place/?q=place_id:ChIJD_BHQCURHBURGkBOl2BJ61o"
-  },
-  {
+    // Givat Yoav coffee is Mulan Patisserie only. Do not add Yoava / יואבה.
     category: "קפה",
     categoryEn: "Coffee",
     name: "נינו",
