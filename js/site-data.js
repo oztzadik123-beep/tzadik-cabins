@@ -34,37 +34,8 @@ window.PLACES = [
   {
     category: "קפה",
     categoryEn: "Coffee",
-    name: "דורא",
-    nameEn: "Dora",
-    timeHe: "כ-2 דקות נסיעה, או כ-7 דקות הליכה",
-    timeEn: "About 2 min drive, or about 7 min walk",
-    he: "עגלת קפה במשתלת הגולן בנוב: קפה, כריכים וסלי פיקניק. לפי פרסום כיפה, כשרה ברבנות רמת הגולן. סגורה בשבת. שעות הפתיחה לא אחידות בין הפרסומים, ולכן כדאי לבדוק באותו יום.",
-    en: "Coffee cart at the Golan nursery in Nov: coffee, sandwiches and picnic baskets. Listed as kosher under the Ramat HaGolan rabbinate. Closed on Shabbat. Published opening hours disagree, so check on the day."
-  },
-  {
-    category: "קפה",
-    categoryEn: "Coffee",
-    name: "אבאלה",
-    nameEn: "Abala",
-    timeHe: "בתוך המושב",
-    timeEn: "In the moshav",
-    he: "עגלת קפה בכרם בנוב: קפה, בייגל ויין. לפי תיירות גולן, פתוחה בימים ג׳–ו׳ בבוקר, וביום חמישי גם בערב. הכשרות לא אומתה כאן.",
-    en: "Coffee cart in a vineyard in Nov: coffee, bagels and wine. Tourism Golan lists it Tuesday to Friday mornings, and Thursday evening as well. Kashrut was not verified here."
-  },
-  {
-    category: "קפה",
-    categoryEn: "Coffee",
-    name: "טראקפה",
-    nameEn: "Truckafe",
-    minutes: 9,
-    he: "ביקב שאטו גולן באליעד. מאפים ופינת יצירה לילדים בין הגפנים. פתוחה גם בשבת. הכשרות לא צוינה במקורות שבדקנו.",
-    en: "At Chateau Golan winery in Moshav Eliad. Pastries and a children's corner among the vines. Open on Shabbat. The sources we checked did not state kashrut."
-  },
-  {
-    category: "קפה",
-    categoryEn: "Coffee",
     name: "מולאן פטיסרי",
-    nameEn: "Mulan Patisserie",
+    nameEn: "Moulin Patisserie",
     minutes: 17,
     timeHe: "כ-17 דקות נסיעה (כ-15.5 ק״מ)",
     timeEn: "About 17 min drive (about 15.5 km)",
