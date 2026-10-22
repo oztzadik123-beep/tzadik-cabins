@@ -28,18 +28,43 @@
 <link rel="apple-touch-icon" href="images/og/apple-touch-icon.png">
 <style>
 svg{max-width:28px;max-height:28px;overflow:hidden}
-body{margin:0}
+body{margin:0;font-family:Assistant,"Segoe UI","Arial Hebrew",Arial,sans-serif;font-size:1.125rem;line-height:1.65}
+img{max-width:100%;height:auto;display:block}
+.skip{position:absolute;top:-4rem}
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;color:#fff;background:#1a2e1a}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.38) 0%,rgba(0,0,0,.08) 38%,rgba(0,0,0,.68) 100%)}
 .hero-content{position:relative;z-index:2;width:min(64rem,calc(100% - 3rem));margin-inline:auto;padding-top:5.5rem;padding-bottom:calc(7.75rem + env(safe-area-inset-bottom))}
 .brandbar{position:absolute;top:0;left:0;right:0;z-index:20;background:transparent;color:#fff}
-.brandbar-inner{width:min(1080px,calc(100% - 2.4rem));margin-inline:auto;display:flex;align-items:center;justify-content:space-between;min-height:4rem}
-.brand,.hero h1,.hero-body,.loc-pill{color:#fff;text-decoration:none}
-.hero h1{font-size:clamp(2.25rem,7vw,5.5rem);line-height:1.25;margin:0 0 .6rem}
-.hero-sub{color:#fde047;font-weight:700;font-size:clamp(1.4rem,4vw,3.25rem);margin:0 0 1rem}
-.loc-pill{display:inline-flex;align-items:center;gap:.4rem}
-.nav-wa,.lang-link{color:#fff}
+.brandbar-inner{width:min(1080px,calc(100% - 2.4rem));margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:4rem}
+.bar-actions{display:flex;align-items:center;gap:.55rem}
+.brand{color:#fff;text-decoration:none;font-weight:700;font-size:1.15rem;line-height:1.2}
+.brand small{display:block;font-weight:400;font-size:.78rem;opacity:.85}
+.hero h1{color:#fff;font-size:clamp(2.25rem,7vw,5.5rem);line-height:1.25;margin:0 0 .6rem}
+.hero-sub{color:#fde047;font-weight:700;font-size:clamp(1.4rem,4vw,3.25rem);line-height:1.2;margin:0 0 1rem}
+.hero-body{color:rgba(255,255,255,.92);font-size:clamp(1rem,2vw,1.15rem);max-width:40rem;margin:0 0 1.4rem}
+.loc-pill{display:inline-flex;align-items:center;gap:.4rem;margin:0 0 1rem;color:#fff;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:.35rem .9rem;font-weight:600}
+.actions{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:48px;padding:.7rem 1.15rem;border-radius:999px;font-weight:700;font-size:1.05rem;text-decoration:none;border:2px solid transparent}
+.btn-wa{background:#15803d;color:#fff}
+.btn-ghost{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.4)}
+.stats{display:flex;flex-wrap:wrap;gap:1.4rem 2rem;list-style:none;padding:1.4rem 0 0;margin:2rem 0 0;border-top:1px solid rgba(255,255,255,.2)}
+.stats strong{display:block;font-size:1.85rem;color:#fde047;line-height:1.1}
+.stats span{color:rgba(255,255,255,.78);font-weight:500;font-size:.95rem}
+.lang-link{color:#fff;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.35rem .75rem;min-height:40px;display:inline-flex;align-items:center}
+.nav-wa{display:inline-flex;align-items:center;gap:.4rem;background:#15803d;color:#fff;text-decoration:none;font-weight:700;border-radius:999px;min-height:40px;padding:.35rem .85rem}
+@media (max-width:799px){
+.section-links{display:none}
+.nav-wa span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.nav-wa{flex:0 0 auto;width:42px;height:42px;min-height:42px;padding:0;justify-content:center}
+.lang-link{flex:0 0 auto}
+}
+.dock{position:fixed;left:.65rem;bottom:calc(.65rem + env(safe-area-inset-bottom));z-index:40;display:flex;width:auto;max-width:calc(100% - 5.2rem);gap:.3rem;padding:.28rem;background:rgba(244,239,228,.96);border:1px solid #e3d5c2;border-radius:999px}
+.dock a{display:flex;align-items:center;justify-content:center;min-height:40px;padding:.35rem .7rem;border-radius:999px;color:#fff;text-decoration:none;font-weight:700;font-size:.92rem}
+.dock .wa{background:#15803d}.dock .call{background:#2d4a2d}.dock .go{background:#8b5e3c}
+#a11y-btn{position:fixed;right:.7rem;bottom:calc(.7rem + env(safe-area-inset-bottom));z-index:60;width:52px;height:52px;border:0;border-radius:50%;background:#2d4a2d;color:#fff;padding:0;display:flex;align-items:center;justify-content:center}
+.a11y-btn-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+#a11y-btn svg{width:28px;height:28px}
 </style>
 <link rel="stylesheet" href="css/styles.css">
 </head>
