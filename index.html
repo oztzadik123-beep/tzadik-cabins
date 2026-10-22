@@ -3,8 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>בקתות צדיק כתמר | מושב נוב, רמת הגולן</title>
-<meta name="description" content="שתי בקתות עץ במושב נוב — זוג + 6 ילדים, בריכה, ג'קוזי פרטי, כרם ענבי יין ובוסתן. כ-30 דקות מהכנרת.">
+<!--
+  google-site-verification: when Search Console gives you a meta tag, paste it on the next line.
+  Do not invent a token. The tag looks like:
+  <meta name="google-site-verification" content="PASTE_THE_TOKEN_FROM_SEARCH_CONSOLE">
+-->
+<title>צימר במושב נוב | בקתות צדיק כתמר ברמת הגולן</title>
+<meta name="description" content="צימר במושב נוב למשפחות ולזוג עם ילדים: שתי בקתות עץ ברמת הגולן, ג'קוזי פרטי, בריכה בקיץ וציוד לשבת. כ-30 דקות מהכנרת.">
 <link rel="canonical" href="https://oztzadik123-beep.github.io/tzadik-cabins/">
 <link rel="alternate" hreflang="he" href="https://oztzadik123-beep.github.io/tzadik-cabins/">
 <link rel="alternate" hreflang="en" href="https://oztzadik123-beep.github.io/tzadik-cabins/en.html">
@@ -14,8 +19,9 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:site_name" content="בקתות צדיק כתמר">
-<meta property="og:title" content="בקתות צדיק כתמר | מושב נוב, רמת הגולן">
-<meta property="og:description" content="שתי בקתות עץ במושב נוב — זוג + 6 ילדים, בריכה, ג'קוזי פרטי, כרם ענבי יין ובוסתן.">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="צימר במושב נוב | בקתות צדיק כתמר ברמת הגולן">
+<meta property="og:description" content="צימר במושב נוב למשפחות ולזוג עם ילדים: שתי בקתות עץ ברמת הגולן, ג'קוזי פרטי, בריכה בקיץ וציוד לשבת. כ-30 דקות מהכנרת.">
 <meta property="og:url" content="https://oztzadik123-beep.github.io/tzadik-cabins/">
 <meta property="og:image" content="https://oztzadik123-beep.github.io/tzadik-cabins/images/og/share.jpg">
 <meta property="og:image:secure_url" content="https://oztzadik123-beep.github.io/tzadik-cabins/images/og/share.jpg">
@@ -24,12 +30,14 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="ערסל בין עצים בגינה הירוקה במושב נוב">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="בקתות צדיק כתמר | מושב נוב, רמת הגולן">
-<meta name="twitter:description" content="שתי בקתות עץ במושב נוב — זוג + 6 ילדים, בריכה, ג'קוזי פרטי, כרם ענבי יין ובוסתן.">
+<meta name="twitter:title" content="צימר במושב נוב | בקתות צדיק כתמר ברמת הגולן">
+<meta name="twitter:description" content="צימר במושב נוב למשפחות ולזוג עם ילדים: שתי בקתות עץ ברמת הגולן, ג'קוזי פרטי, בריכה בקיץ וציוד לשבת. כ-30 דקות מהכנרת.">
 <meta name="twitter:image" content="https://oztzadik123-beep.github.io/tzadik-cabins/images/og/share.jpg">
 <meta name="twitter:image:alt" content="ערסל בין עצים בגינה הירוקה במושב נוב">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="images/og/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" as="image" href="images/cabins/golden-hour.webp" fetchpriority="high">
 <style>
 svg{max-width:28px;max-height:28px;overflow:hidden}
 body{margin:0;font-family:Assistant,"Segoe UI","Arial Hebrew",Arial,sans-serif;font-size:1.125rem;line-height:1.65}
@@ -70,7 +78,9 @@ img{max-width:100%;height:auto;display:block}
 .a11y-btn-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 #a11y-btn svg{width:28px;height:28px}
 </style>
-<link rel="stylesheet" href="css/styles.css">
+<link rel="preload" href="css/styles.css" as="style">
+<link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="css/styles.css"></noscript>
 <!--
   TODO(owner) — לא להציג לאורחים, רק למלא כשיש תשובה:
   - קואורדינטות הדלת: js/site-data.js → cabinCoordinates. עד אז הניווט הוא לשער הכניסה למושב.
@@ -83,35 +93,199 @@ img{max-width:100%;height:auto;display:block}
   - זמני נסיעה: רק ב-js/site-data.js.
   - שובר מילואים: לאשר מול הסליקה שהמסוף מוגדר כ"לינה" אצל כאל.
   - יין בכניסה: לא לפרסם עד שהבעלים מאשר שהבקבוק אכן מחכה לאורחים.
+  - JSON-LD geo: אין קואורדינטות מאושרות. לא להוסיף latitude/longitude עד ש-cabinCoordinates נבדק מול דלת הבקתה.
 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LodgingBusiness",
-  "name": "בקתות צדיק כתמר",
-  "description": "שתי בקתות עץ במושב נוב. בכל בקתה זוג + 6 ילדים, בריכה, ג'קוזי פרטי וכרם ענבי יין.",
-  "url": "https://oztzadik123-beep.github.io/tzadik-cabins/",
-  "image": "https://oztzadik123-beep.github.io/tzadik-cabins/images/og/share.jpg",
-  "telephone": "+972504606674",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "נוב",
-    "addressRegion": "רמת הגולן",
-    "addressCountry": "IL"
-  },
-  "amenityFeature": [
-    {"@type": "LocationFeatureSpecification", "name": "חדר הורים נפרד", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "גלריה עם מזרונים לילדים", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "ג'קוזי פרטי", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "בריכה בקיץ", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "מטבחון", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "מיזוג אוויר", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "חצר, בוסתן וכרם", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "מקלט בבית", "value": true}
-  ],
-  "additionalProperty": [
-    {"@type": "PropertyValue", "name": "קיבולת לבקתה", "value": "זוג + 6 ילדים"},
-    {"@type": "PropertyValue", "name": "שתי הבקתות יחד", "value": "עד 16 אנשים"}
+  "@graph": [
+    {
+      "@type": "LodgingBusiness",
+      "@id": "https://oztzadik123-beep.github.io/tzadik-cabins/#lodging",
+      "name": "בקתות צדיק כתמר",
+      "description": "שתי בקתות עץ במושב נוב. בכל בקתה זוג + 6 ילדים, בריכה בקיץ, ג'קוזי פרטי וכרם ענבי יין.",
+      "url": "https://oztzadik123-beep.github.io/tzadik-cabins/",
+      "image": "https://oztzadik123-beep.github.io/tzadik-cabins/images/og/share.jpg",
+      "telephone": "+972-50-460-6674",
+      "inLanguage": "he",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "נוב",
+        "addressRegion": "רמת הגולן",
+        "addressCountry": "IL"
+      },
+      "numberOfRooms": 2,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 16,
+        "unitText": "עד 16 אורחים בשתי הבקתות; זוג + 6 ילדים בכל בקתה"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "חדר הורים נפרד",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "גלריה עם מזרונים לילדים",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "ג'קוזי פרטי",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "מטבחון",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "מיזוג אוויר",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "חצר, בוסתן וכרם",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "בריכה בקיץ",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "מקום למנגל — לא בשבת",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "פלטה, מיחם ושעוני שבת",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "מקלט בבית",
+          "value": true
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "קיבולת לבקתה",
+          "value": "זוג + 6 ילדים"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "שתי הבקתות יחד",
+          "value": "עד 16 אנשים"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "חיות מחמד",
+          "value": "בחצר בלבד, לא בתוך הבקתה"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://oztzadik123-beep.github.io/tzadik-cabins/#faq",
+      "url": "https://oztzadik123-beep.github.io/tzadik-cabins/#faq",
+      "inLanguage": "he",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "כמה אנשים מתאימים לכל בקתה?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "כל בקתה מתוכננת לזוג + 6 ילדים. חדר שינה זוגי פרטי בקומת הכניסה, ומעליו קומת גלריה מרווחת עם מזרונים. עולים לגלריה במדרגות."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "האם הבריכה פתוחה כל השנה?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "הבריכה פתוחה בחודשי הקיץ. היא בנויה לתוך דק עץ ומשותפת לשתי הבקתות. הג'קוזי פרטי בתוך כל בקתה."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "מה לגבי שבת — מתי מגיעים?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "יש להגיע לפני כניסת שבת. אפשר להשאיר את הרכב בחניה שליד שער המושב, כ־100 מטר הליכה מהבקתות – נוח מאוד למי שרוצה לצאת לטיולים גם בשבת בלי לנסוע בתוך המושב. הרבה אורחים עושים כך. בבקתה יש פלטה, מיחם ושעוני שבת. בית הכנסת במרחק של כ־5 דקות הליכה."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "האם המסעדה שבמושב כשרה?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "כן. המסעדה הבשרית במושב נוב כשרה. בנוסף, עגלות קפה טעימות וייחודיות באזור."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "מה עם כלים וכשרות?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "מטעמי כשרות אנחנו משאירים לכם להביא את כלי האוכל שלכם; כלים חד־פעמיים בסיסיים מחכים לכם בבקתה."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "האם מותר להביא חיות מחמד?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "חיות מחמד מוזמנות לחצר בלבד – לא בתוך הבקתה."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "האם ניתן לשכור את שתי הבקתות יחד?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "כן. כל בקתה עצמאית ומושכרת בנפרד, אך ניתן להזמין שתיהן יחד — עד 16 אורחים. אם אתם צריכים לשבת כולם יחד לארוחה, דברו איתנו ונגיד מה אפשר."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "מה כלול?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "מיזוג אוויר בכל בקתה, מכונת קפה, קפה, תה, סוכר, חלב וכלים חד־פעמיים, אינטרנט אלחוטי, מטבחון מאובזר וג'קוזי פרטי. מחירים ופרטים? שלחו לנו וואטסאפ — נשמח לענות."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "יש מקלט?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "יש מקלט בבית."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "מכבדים שובר מילואים?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "כן. מכבדים שובר נופש מילואים (כאל). אם יש לכם שובר — כתבו לנו ונבדוק שההזמנה מתאימה לו."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "מה הכרם שליד הבקתות?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "כרם ענבי יין בבעלות המשפחה — ממש ליד הבקתות. האורחים מוזמנים לטייל בו ולצלם. הכרם אינו לקטיף."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
@@ -140,7 +314,7 @@ img{max-width:100%;height:auto;display:block}
 
 <main id="main">
   <section class="hero" id="top">
-    <img class="hero-bg" src="images/cabins/golden-hour.webp" width="1200" height="1600" alt="" fetchpriority="high" decoding="async">
+    <img class="hero-bg" src="images/cabins/golden-hour.webp" width="1200" height="1600" alt="בקתה עץ בשעת בין ערביים במושב נוב" fetchpriority="high" decoding="async">
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
       <p class="loc-pill">
@@ -464,7 +638,7 @@ img{max-width:100%;height:auto;display:block}
 
   <section class="section section-paper" id="contact">
     <div class="contact-hero">
-      <img src="images/area/windmills.webp" width="1600" height="1200" alt="" loading="lazy" decoding="async">
+      <img src="images/area/windmills.webp" width="1600" height="1200" alt="טורבינות רוח בשקיעה" loading="lazy" decoding="async">
       <div class="veil" aria-hidden="true"></div>
       <div class="wrap">
         <p class="contact-kicker">צרו קשר</p>

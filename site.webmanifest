@@ -1,0 +1,24 @@
+{
+  "name": "בקתות צדיק כתמר",
+  "short_name": "צדיק כתמר",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "/tzadik-cabins/",
+  "scope": "/tzadik-cabins/",
+  "display": "browser",
+  "background_color": "#f5ede0",
+  "theme_color": "#16301c",
+  "icons": [
+    {
+      "src": "/tzadik-cabins/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/tzadik-cabins/images/og/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
