@@ -73,16 +73,6 @@ window.PLACES = [
     maps: "https://www.google.com/maps/search/?api=1&query=32.7934094,35.6770446"
   },
   {
-    // Givat Yoav coffee is Mulan Patisserie only. Do not add Yoava / יואבה.
-    category: "קפה",
-    categoryEn: "Coffee",
-    name: "נינו",
-    nameEn: "Nino",
-    minutes: 22,
-    he: "במעלה גמלא, מול הכנרת, עם דשא וגן שעשועים מקורה. לפי הפרסום: חלבי כשר ללא תעודת כשרות, ופתוח בשבת. בעיקר בסופי שבוע ובחגים.",
-    en: "In Ma'ale Gamla, facing the Kinneret, with a lawn and an indoor playground. Listed as dairy-kosher without a certificate, and open on Shabbat. Mainly weekends and holidays."
-  },
-  {
     category: "קפה",
     categoryEn: "Coffee",
     name: "קפה מוייז",
