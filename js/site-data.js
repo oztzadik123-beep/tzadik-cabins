@@ -4,9 +4,8 @@
 
    Drive times were measured on Google Maps from Moshav Nov on 22 October 2026.
    They do not include traffic or parking. Edit the numbers here only.
-   The hero line "about 30 minutes to the Kinneret" is the rounded label for
-   Kursi (22) and Ein Gev (27). Change that sentence in index.html and en.html
-   if you remeasure those two.
+   Kursi (22) and Ein Gev (27) are the Kinneret times. They are not repeated
+   as a hero slogan. If you remeasure them, edit only those PLACES entries.
 
    TODO(owner): cabinCoordinates is the cabin door, not the gate.
    Leave it null until you have checked the pin while standing at the cabin.
