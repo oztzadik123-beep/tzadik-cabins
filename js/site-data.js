@@ -44,8 +44,8 @@ window.PLACES = [
   {
     category: "קפה",
     categoryEn: "Coffee",
-    name: "טראקפה",
-    nameEn: "Truckafe",
+    name: "טראקפה (לא כשר)",
+    nameEn: "Truckafe (not kosher)",
     minutes: 9,
     he: "ביקב שאטו גולן באליעד. מאפים ופינת יצירה לילדים בין הגפנים. פתוחה גם בשבת. הכשרות לא צוינה במקורות שבדקנו.",
     en: "At Chateau Golan winery in Moshav Eliad. Pastries and a children's corner among the vines. Open on Shabbat. The sources we checked did not state kashrut."
@@ -53,8 +53,8 @@ window.PLACES = [
   {
     category: "קפה",
     categoryEn: "Coffee",
-    name: "מולאן פטיסרי",
-    nameEn: "Moulin Patisserie",
+    name: "מולאן פטיסרי (לא כשר)",
+    nameEn: "Moulin Patisserie (not kosher)",
     minutes: 17,
     timeHe: "כ-17 דקות נסיעה (כ-15.5 ק״מ)",
     timeEn: "About 17 min drive (about 15.5 km)",
