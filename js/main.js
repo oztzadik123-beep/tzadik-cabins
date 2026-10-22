@@ -52,6 +52,14 @@
           noteP.textContent = note;
           article.appendChild(noteP);
         }
+        if (place.maps) {
+          var mapLink = document.createElement("a");
+          mapLink.href = place.maps;
+          mapLink.target = "_blank";
+          mapLink.rel = "noopener";
+          mapLink.textContent = he ? "מיקום בגוגל מפות" : "Location on Google Maps";
+          article.appendChild(mapLink);
+        }
         li.appendChild(article);
         ul.appendChild(li);
       });
@@ -77,7 +85,7 @@
     return {
       waze: "https://waze.com/ul?q=" + q + "&navigate=yes",
       google: "https://www.google.com/maps/search/?api=1&query=" + q,
-      embed: "https://maps.google.com/maps?q=" + q + "&z=13&output=embed&hl=" + (he ? "he" : "en")
+      embed: "https://maps.google.com/maps?q=" + q + "&z=15&output=embed&hl=" + (he ? "he" : "en")
     };
   }
 

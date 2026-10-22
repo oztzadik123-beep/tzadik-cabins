@@ -8,10 +8,12 @@
    Kursi (22) and Ein Gev (27). Change that sentence in index.html and en.html
    if you remeasure those two.
 
-   TODO(owner): cabinCoordinates is the house pin, not the moshav.
+   TODO(owner): cabinCoordinates is the cabin door, not the gate.
    Leave it null until you have checked the pin while standing at the cabin.
-   A Google listing has shown 32.830254, 35.784341. That pin is NOT confirmed
-   as the house. Do not paste it here until you have checked it.
+   Until then placeQuery is the moshav entrance gate (no street address;
+   the cabins are about 100 meters from that gate).
+   A Google listing has shown 32.830254, 35.784341. That pin is NOT confirmed.
+   Do not paste it here until you have checked it.
 */
 window.SITE = {
   phoneDisplay: "050-460-6674",
@@ -19,8 +21,8 @@ window.SITE = {
   phoneWa: "972504606674",
   contactName: "דן",
   contactNameEn: "Dan",
-  placeQuery: "מושב נוב, רמת הגולן",
-  placeQueryEn: "Moshav Nov, Golan Heights",
+  placeQuery: "שער הכניסה למושב נוב, רמת הגולן",
+  placeQueryEn: "Moshav Nov entrance gate, Golan Heights",
   cabinCoordinates: null
 };
 
@@ -60,6 +62,19 @@ window.PLACES = [
     en: "At Chateau Golan winery in Moshav Eliad. Pastries and a children's corner among the vines. Open on Shabbat. The sources we checked did not state kashrut."
   },
   {
+    // Givat Yoav: Mulan Patisserie only. Do not add Yoava / יואבה.
+    category: "קפה",
+    categoryEn: "Coffee",
+    name: "מולאן פטיסרי",
+    nameEn: "Mulan Patisserie",
+    minutes: 17,
+    timeHe: "כ-17 דקות נסיעה (כ-15.5 ק״מ)",
+    timeEn: "About 17 min drive (about 15.5 km)",
+    he: "בית קפה עם נוף, באזור גבעת יואב. שעות הפתיחה לא מפורסמות כאן.",
+    en: "A café with a view, in the Givat Yoav area. Opening hours are not listed here.",
+    maps: "https://www.google.com/maps/search/?api=1&query=32.7934094,35.6770446"
+  },
+  {
     category: "קפה",
     categoryEn: "Coffee",
     name: "נינו",
@@ -67,6 +82,18 @@ window.PLACES = [
     minutes: 22,
     he: "במעלה גמלא, מול הכנרת, עם דשא וגן שעשועים מקורה. לפי הפרסום: חלבי כשר ללא תעודת כשרות, ופתוח בשבת. בעיקר בסופי שבוע ובחגים.",
     en: "In Ma'ale Gamla, facing the Kinneret, with a lawn and an indoor playground. Listed as dairy-kosher without a certificate, and open on Shabbat. Mainly weekends and holidays."
+  },
+  {
+    category: "קפה",
+    categoryEn: "Coffee",
+    name: "קפה מוייז",
+    nameEn: "Moise coffee cart",
+    minutes: 29,
+    timeHe: "כ-29 דקות נסיעה (כ-33 ק״מ)",
+    timeEn: "About 29 min drive (about 33 km)",
+    he: "עגלת קפה במושב רמות, עם נוף לכנרת, מאפים ובראנץ׳. כשר למהדרין לדברי המקום. שעות הפתיחה לא מפורסמות כאן.",
+    en: "A coffee cart in Moshav Ramot, with a view of the Kinneret, pastries and brunch. Kosher mehadrin according to the place. Opening hours are not listed here.",
+    maps: "https://www.google.com/maps/place/?q=place_id:ChIJF_V4XWcRHBURYZnmaBdB0Fo"
   },
   {
     category: "אוכל",

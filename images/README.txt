@@ -23,4 +23,5 @@
 כדי להוסיף תמונה חדשה לגלריה:
   שימו את הקובץ בתיקייה המתאימה, והעתיקו ב-index.html שורת <button class="js-photo"> קיימת עם הנתיב וה-alt החדשים.
 
-תמונת הפתיחה היא images/cabins/golden-hour.webp.
+תמונת הפתיחה ותמונת השיתוף הן הגינה הירוקה: images/cabins/exterior-path.webp ו-images/og/share.jpg.
+תמונת הג'קוזי (images/cabins/golden-hour.webp) מופיעה רק בתוך הגלריה, לא כפתיח ולא כתמונה ראשונה.

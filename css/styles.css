@@ -168,9 +168,10 @@ p { margin: 0 0 0.9rem; }
 }
 
 .hero-photo { height: 46vh; min-height: 240px; max-height: 560px; overflow: hidden; background: #1a2e1a; }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 62%; }
 .hero-copy { background: var(--forest); color: #fff; padding: 1.6rem 0 2.2rem; }
-.hero-copy p { color: #f7f3ea; font-size: 1.2rem; max-width: 40rem; }
+.hero-copy p { color: #f7f3ea; font-size: 1.15rem; max-width: 40rem; }
+.hero-lead { color: #fff; font-size: 1.35rem; font-weight: 700; line-height: 1.35; }
 .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0 0 1.2rem; list-style: none; }
 .tags li {
   background: var(--gold);
@@ -261,6 +262,7 @@ p { margin: 0 0 0.9rem; }
 .place-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.7rem; }
 .place h4 { margin: 0 0 0.2rem; font-size: 1.2rem; color: var(--forest); }
 .time { font-weight: 700; color: var(--forest-2); margin-bottom: 0.35rem; }
+.place-list a { display: inline-block; margin-top: 0.45rem; }
 .note { margin-top: 0.55rem; font-size: 1rem; }
 .place-warn { background: var(--warn-bg); border-color: var(--warn-line); }
 .place-warn h4::before { content: "שימו לב: "; }
