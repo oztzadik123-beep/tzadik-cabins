@@ -73,18 +73,6 @@ window.PLACES = [
     maps: "https://www.google.com/maps/search/?api=1&query=32.7934094,35.6770446"
   },
   {
-    category: "קפה",
-    categoryEn: "Coffee",
-    name: "קפה מוייז",
-    nameEn: "Moise coffee cart",
-    minutes: 29,
-    timeHe: "כ-29 דקות נסיעה (כ-33 ק״מ)",
-    timeEn: "About 29 min drive (about 33 km)",
-    he: "עגלת קפה במושב רמות, עם נוף לכנרת, מאפים ובראנץ׳. כשר למהדרין לדברי המקום. שעות הפתיחה לא מפורסמות כאן.",
-    en: "A coffee cart in Moshav Ramot, with a view of the Kinneret, pastries and brunch. Kosher mehadrin according to the place. Opening hours are not listed here.",
-    maps: "https://www.google.com/maps/place/?q=place_id:ChIJF_V4XWcRHBURYZnmaBdB0Fo"
-  },
-  {
     category: "אוכל",
     categoryEn: "Food",
     name: "גיליס",

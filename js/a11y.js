@@ -79,7 +79,7 @@
   btn.setAttribute("aria-controls", "a11y-panel");
   btn.setAttribute("aria-label", t.open);
   btn.innerHTML =
-    '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="4.5" r="1.7"></circle><path d="M4 9h16M12 8.2V14M12 14l-3.2 6.2M12 14l3.2 6.2"></path></svg>' +
+    '<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><circle cx="12" cy="4.5" r="1.7"></circle><path d="M4 9h16M12 8.2V14M12 14l-3.2 6.2M12 14l3.2 6.2"></path></svg>' +
     '<span class="a11y-btn-label">' + t.open + "</span>";
 
   var panel = document.createElement("div");
