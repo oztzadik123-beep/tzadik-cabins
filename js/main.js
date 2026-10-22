@@ -160,24 +160,6 @@
     form.addEventListener("change", refreshWaLinks);
   }
 
-  function wireTextSize() {
-    var button = document.getElementById("text-boost");
-    if (!button) return;
-    var key = "tzadik-large-text";
-    function apply(on) {
-      document.documentElement.classList.toggle("text-lg", on);
-      button.setAttribute("aria-pressed", on ? "true" : "false");
-    }
-    var stored = false;
-    try { stored = localStorage.getItem(key) === "1"; } catch (e) { stored = false; }
-    apply(stored);
-    button.addEventListener("click", function () {
-      var on = button.getAttribute("aria-pressed") !== "true";
-      apply(on);
-      try { localStorage.setItem(key, on ? "1" : "0"); } catch (e) {}
-    });
-  }
-
   function wireLightbox() {
     var dialog = document.getElementById("lightbox");
     var img = document.getElementById("lb-img");
@@ -233,7 +215,6 @@
   applyMaps();
   refreshWaLinks();
   wireForm();
-  wireTextSize();
   wireLightbox();
   wireMenu();
 })();
