@@ -162,8 +162,8 @@ window.PLACES = [
     name: "עין גב",
     nameEn: "Ein Gev",
     minutes: 27,
-    he: "יישוב וחוף על הכנרת. יחד עם כורסי, נוח לומר שזה בערך חצי שעה לכנרת.",
-    en: "A community and beach on the Kinneret. Together with Kursi, about half an hour to the Kinneret is a fair way to say it."
+    he: "יישוב וחוף על הכנרת.",
+    en: "A community and beach on the Kinneret."
   },
   {
     category: "כנרת",
