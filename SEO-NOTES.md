@@ -40,7 +40,18 @@ Before this branch (main `f150be3`):
 | Accessibility | 100 |
 | Best practices | 100 |
 
-LCP 3.3 s, CLS 0.031, TBT 0 ms. After scores are filled in once this branch is measured the same way.
+LCP 3.3 s, CLS 0.031, TBT 0 ms.
+
+After this branch, same command, mobile:
+
+| Category | Score |
+| --- | --- |
+| Performance | 96 |
+| SEO | 100 |
+| Accessibility | 100 |
+| Best practices | 100 |
+
+LCP 2.8 s, CLS 0.053, TBT 0 ms. `styles.css` is no longer render-blocking. CLS moved from 0.031 to 0.053 because the full stylesheet arrives after the critical hero style; both numbers are in the good range, and the settled first screen matches the previous pixels.
 
 ## What matters more than these tags
 
