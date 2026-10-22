@@ -57,7 +57,7 @@
           mapLink.href = place.maps;
           mapLink.target = "_blank";
           mapLink.rel = "noopener";
-          mapLink.textContent = he ? "מיקום בגוגל מפות" : "Location on Google Maps";
+          mapLink.textContent = he ? "נראה במפה" : "See on the map";
           article.appendChild(mapLink);
         }
         li.appendChild(article);
