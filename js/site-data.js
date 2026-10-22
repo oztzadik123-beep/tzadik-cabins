@@ -34,8 +34,8 @@ window.PLACES = [
   {
     category: "קפה",
     categoryEn: "Coffee",
-    name: "דורא",
-    nameEn: "Dora",
+    name: "דורא (כשר)",
+    nameEn: "Dora (kosher)",
     timeHe: "כ-2 דקות נסיעה, או כ-7 דקות הליכה",
     timeEn: "About 2 min drive, or about 7 min walk",
     he: "עגלת קפה במשתלת הגולן בנוב: קפה, כריכים וסלי פיקניק. לפי פרסום כיפה, כשרה ברבנות רמת הגולן. סגורה בשבת. שעות הפתיחה לא אחידות בין הפרסומים, ולכן כדאי לבדוק באותו יום.",
@@ -47,8 +47,8 @@ window.PLACES = [
     name: "טראקפה (לא כשר)",
     nameEn: "Truckafe (not kosher)",
     minutes: 9,
-    he: "ביקב שאטו גולן באליעד. מאפים ופינת יצירה לילדים בין הגפנים. פתוחה גם בשבת. הכשרות לא צוינה במקורות שבדקנו.",
-    en: "At Chateau Golan winery in Moshav Eliad. Pastries and a children's corner among the vines. Open on Shabbat. The sources we checked did not state kashrut."
+    he: "ביקב שאטו גולן באליעד. מאפים ופינת יצירה לילדים בין הגפנים. פתוחה גם בשבת. ללא תעודת כשרות.",
+    en: "At Chateau Golan winery in Moshav Eliad. Pastries and a children's corner among the vines. Open on Shabbat. No kashrut certificate."
   },
   {
     category: "קפה",
@@ -58,8 +58,8 @@ window.PLACES = [
     minutes: 17,
     timeHe: "כ-17 דקות נסיעה (כ-15.5 ק״מ)",
     timeEn: "About 17 min drive (about 15.5 km)",
-    he: "בית קפה עם נוף, באזור גבעת יואב. שעות הפתיחה משתנות ולא מפורסמות כאן. כדאי לבדוק לפני שמגיעים.",
-    en: "A café with a view, in the Givat Yoav area. Opening hours change and are not listed here. Check before you go.",
+    he: "בית קפה עם נוף, באזור גבעת יואב. שעות הפתיחה משתנות ולא מפורסמות כאן. כדאי לבדוק לפני שמגיעים. חלבי, ללא תעודת כשרות.",
+    en: "A café with a view, in the Givat Yoav area. Opening hours change and are not listed here. Check before you go. Dairy, no kashrut certificate.",
     maps: "https://www.google.com/maps/search/?api=1&query=32.7934094,35.6770446"
   },
   {
