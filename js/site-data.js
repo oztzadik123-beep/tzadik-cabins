@@ -61,7 +61,6 @@ window.PLACES = [
     en: "At Chateau Golan winery in Moshav Eliad. Pastries and a children's corner among the vines. Open on Shabbat. The sources we checked did not state kashrut."
   },
   {
-    // Givat Yoav: Mulan Patisserie only. Do not add Yoava / יואבה.
     category: "קפה",
     categoryEn: "Coffee",
     name: "מולאן פטיסרי",
@@ -69,9 +68,22 @@ window.PLACES = [
     minutes: 17,
     timeHe: "כ-17 דקות נסיעה (כ-15.5 ק״מ)",
     timeEn: "About 17 min drive (about 15.5 km)",
-    he: "בית קפה עם נוף, באזור גבעת יואב. שעות הפתיחה לא מפורסמות כאן.",
-    en: "A café with a view, in the Givat Yoav area. Opening hours are not listed here.",
+    he: "בית קפה עם נוף, באזור גבעת יואב. שעות הפתיחה משתנות ולא מפורסמות כאן. כדאי לבדוק לפני שמגיעים.",
+    en: "A café with a view, in the Givat Yoav area. Opening hours change and are not listed here. Check before you go.",
     maps: "https://www.google.com/maps/search/?api=1&query=32.7934094,35.6770446"
+  },
+  {
+    // A further Givat Yoav café is not confirmed. Do not add a placeholder card.
+    category: "קפה",
+    categoryEn: "Coffee",
+    name: "עגלת קפה יואבה",
+    nameEn: "Yoava coffee cart",
+    minutes: 17,
+    timeHe: "כ-17 דקות נסיעה",
+    timeEn: "About 17 min drive",
+    he: "עגלת קפה בגבעת יואב, עם נוף לכנרת. שעות הפתיחה משתנות ולא מפורסמות כאן. כדאי לבדוק לפני שמגיעים.",
+    en: "A coffee cart in Givat Yoav, with a view of the Kinneret. Opening hours change and are not listed here. Check before you go.",
+    maps: "https://www.google.com/maps/place/?q=place_id:ChIJD_BHQCURHBURGkBOl2BJ61o"
   },
   {
     category: "קפה",
@@ -114,6 +126,32 @@ window.PLACES = [
     en: "Time is to the Black Waterfall parking. The stream has the Black Waterfall, the White Waterfall, and Ein Nov (Breichat HaMalka). It flows all year, and harder in winter. The full trail is long and suits older children better. Ein Nov alone is an easy walk of about ten minutes from the parking. Do not enter the channel when there is a flood warning.",
     noteHe: "שער אבני איתן סגור בשבתות ובחגים, ומחנים מחוץ ליישוב. כדאי לוודא את מצב השער לפני שבת.",
     noteEn: "The Avnei Eitan gate is closed on Shabbat and holidays, and people park outside the community. Recheck the gate before Shabbat."
+  },
+  {
+    category: "מים",
+    categoryEn: "Water",
+    name: "עין פיק",
+    nameEn: "Ein Pik",
+    minutes: 11,
+    timeHe: "כ-11 דקות נסיעה (כ-11.7 ק״מ), בכביש 98",
+    timeEn: "About 11 min drive (about 11.7 km), on Route 98",
+    he: "מעיין. הנסיעה מכאן בכביש 98.",
+    en: "A spring. The drive from here is on Route 98.",
+    maps: "https://www.google.com/maps/search/?api=1&query=32.775199,35.701358"
+  },
+  {
+    category: "מים",
+    categoryEn: "Water",
+    name: "עין אי״ה",
+    nameEn: "Ein Aya",
+    minutes: 17,
+    timeHe: "כ-17 דקות נסיעה (כ-13.8 ק״מ)",
+    timeEn: "About 17 min drive (about 13.8 km)",
+    he: "מעיין.",
+    en: "A spring.",
+    noteHe: "הדרך האחרונה לא מסומנת – קחו ניווט",
+    noteEn: "The last stretch of the road is not marked. Take navigation.",
+    maps: "https://www.google.com/maps/search/?api=1&query=32.7576433,35.745997"
   },
   {
     category: "מים",
