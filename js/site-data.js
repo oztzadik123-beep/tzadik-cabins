@@ -38,8 +38,8 @@ window.PLACES = [
     nameEn: "Dora",
     timeHe: "כ-2 דקות נסיעה, או כ-7 דקות הליכה",
     timeEn: "About 2 min drive, or about 7 min walk",
-    he: "קפה, כריכים וסלי פיקניק, במשתלת הגולן שבמושב. לפי פרסום כיפה, כשרה ברבנות רמת הגולן. סגורה בשבת. השעות משתנות בין הפרסומים, אז שווה לבדוק באותו יום.",
-    en: "Coffee, sandwiches and picnic baskets, at the Golan nursery in the moshav. Listed as kosher under the Ramat HaGolan rabbinate. Closed on Shabbat. Published hours differ, so it is worth checking on the day."
+    he: "עגלת קפה במשתלת הגולן בנוב: קפה, כריכים וסלי פיקניק. לפי פרסום כיפה, כשרה ברבנות רמת הגולן. סגורה בשבת. שעות הפתיחה לא אחידות בין הפרסומים, ולכן כדאי לבדוק באותו יום.",
+    en: "Coffee cart at the Golan nursery in Nov: coffee, sandwiches and picnic baskets. Listed as kosher under the Ramat HaGolan rabbinate. Closed on Shabbat. Published opening hours disagree, so check on the day."
   },
   {
     category: "קפה",
@@ -48,8 +48,8 @@ window.PLACES = [
     nameEn: "Abala",
     timeHe: "בתוך המושב",
     timeEn: "In the moshav",
-    he: "קפה, בייגל ויין, בכרם שבמושב. לפי תיירות גולן, פתוחה בימים ג׳–ו׳ בבוקר, וביום חמישי גם בערב. על הכשרות שווה לשאול במקום.",
-    en: "Coffee, bagels and wine, in a vineyard in the moshav. Tourism Golan lists it Tuesday to Friday mornings, and Thursday evening as well. Worth asking the place about kashrut."
+    he: "עגלת קפה בכרם בנוב: קפה, בייגל ויין. לפי תיירות גולן, פתוחה בימים ג׳–ו׳ בבוקר, וביום חמישי גם בערב. הכשרות לא אומתה כאן.",
+    en: "Coffee cart in a vineyard in Nov: coffee, bagels and wine. Tourism Golan lists it Tuesday to Friday mornings, and Thursday evening as well. Kashrut was not verified here."
   },
   {
     category: "קפה",
@@ -57,8 +57,8 @@ window.PLACES = [
     name: "טראקפה",
     nameEn: "Truckafe",
     minutes: 9,
-    he: "מאפים ופינת יצירה לילדים בין הגפנים, ביקב שאטו גולן באליעד. פתוחה גם בשבת. על הכשרות שווה לשאול במקום.",
-    en: "Pastries and a children's corner among the vines, at Chateau Golan winery in Eliad. Open on Shabbat too. Worth asking the place about kashrut."
+    he: "ביקב שאטו גולן באליעד. מאפים ופינת יצירה לילדים בין הגפנים. פתוחה גם בשבת. הכשרות לא צוינה במקורות שבדקנו.",
+    en: "At Chateau Golan winery in Moshav Eliad. Pastries and a children's corner among the vines. Open on Shabbat. The sources we checked did not state kashrut."
   },
   {
     category: "קפה",
@@ -68,8 +68,8 @@ window.PLACES = [
     minutes: 17,
     timeHe: "כ-17 דקות נסיעה (כ-15.5 ק״מ)",
     timeEn: "About 17 min drive (about 15.5 km)",
-    he: "בית קפה עם נוף, באזור גבעת יואב. שעות הפתיחה משתנות, אז שווה לבדוק לפני שמגיעים.",
-    en: "A café with a view, in the Givat Yoav area. Opening hours change, so it is worth checking before you go.",
+    he: "בית קפה עם נוף, באזור גבעת יואב. שעות הפתיחה משתנות ולא מפורסמות כאן. כדאי לבדוק לפני שמגיעים.",
+    en: "A café with a view, in the Givat Yoav area. Opening hours change and are not listed here. Check before you go.",
     maps: "https://www.google.com/maps/search/?api=1&query=32.7934094,35.6770446"
   },
   {
@@ -80,8 +80,8 @@ window.PLACES = [
     minutes: 29,
     timeHe: "כ-29 דקות נסיעה (כ-33 ק״מ)",
     timeEn: "About 29 min drive (about 33 km)",
-    he: "עגלת קפה במושב רמות: נוף לכנרת, מאפים ובראנץ׳. כשר למהדרין לדברי המקום. את השעות שווה לבדוק לפני שמגיעים.",
-    en: "A coffee cart in Moshav Ramot: a view of the Kinneret, pastries and brunch. Kosher mehadrin, according to the place. Worth checking the hours before you go.",
+    he: "עגלת קפה במושב רמות, עם נוף לכנרת, מאפים ובראנץ׳. כשר למהדרין לדברי המקום. שעות הפתיחה לא מפורסמות כאן.",
+    en: "A coffee cart in Moshav Ramot, with a view of the Kinneret, pastries and brunch. Kosher mehadrin according to the place. Opening hours are not listed here.",
     maps: "https://www.google.com/maps/place/?q=place_id:ChIJF_V4XWcRHBURYZnmaBdB0Fo"
   },
   {
@@ -91,8 +91,8 @@ window.PLACES = [
     nameEn: "Gillis",
     timeHe: "בתוך המושב",
     timeEn: "In the moshav",
-    he: "מסעדת בשרים וקצבייה במושב. לפי האתר של גיליס: כשרות רבנות, המועצה הדתית רמת הגולן, ובשר חלק למעט סטייק פילה. פתוחה בימי חמישי, וקבוצות מתקבלות בתיאום. את השעות המדויקות שווה לאשר מולם.",
-    en: "A meat restaurant and butcher in the moshav. Gillis's site lists rabbinate kashrut (Ramat HaGolan religious council) and glatt meat except filet steak. Open on Thursdays, and groups are welcome by arrangement. Worth confirming the exact hours with them."
+    he: "מסעדת בשרים וקצבייה בנוב. לפי האתר של גיליס: כשרות רבנות, המועצה הדתית רמת הגולן, ובשר חלק למעט סטייק פילה. המסעדה מפורסמת כפתוחה בימי חמישי, וקבוצות מתקבלות בתיאום. את השעות המדויקות כדאי לאשר מולם.",
+    en: "Meat restaurant and butcher in Nov. Gillis's site lists rabbinate kashrut (Ramat HaGolan religious council) and glatt meat except filet steak. The restaurant is published as open on Thursdays, and groups are accepted by arrangement. Confirm the exact hours with them."
   },
   {
     category: "מים",
@@ -100,10 +100,10 @@ window.PLACES = [
     name: "נחל אל על",
     nameEn: "Nahal El Al",
     minutes: 8,
-    he: "עד חניון המפל השחור. בנחל מחכים המפל השחור, המפל הלבן, ועין נוב (בריכת המלכה). המים זורמים כל השנה, ובחורף חזק יותר. המסלול המלא ארוך ומתאים יותר לילדים גדולים. עין נוב לבד הוא הליכה קלה של כעשר דקות מהחניון. ביום של התראת שיטפונות נשארים מחוץ לערוץ.",
-    en: "To the Black Waterfall parking. The stream has the Black Waterfall, the White Waterfall, and Ein Nov (Breichat HaMalka) waiting. It flows all year, and stronger in winter. The full trail is long and suits older children better. Ein Nov alone is an easy walk of about ten minutes from the parking. On a flood-warning day, stay out of the channel.",
-    noteHe: "בשבתות ובחגים שער אבני איתן סגור, ומחנים מחוץ ליישוב. שווה לוודא את מצב השער לפני שבת.",
-    noteEn: "On Shabbat and holidays the Avnei Eitan gate is closed, and you park outside the community. Worth checking the gate before Shabbat."
+    he: "הזמן הוא עד חניון המפל השחור. בנחל: המפל השחור, המפל הלבן, ועין נוב (בריכת המלכה). המים זורמים כל השנה, ובחורף חזק יותר. המסלול המלא ארוך ומתאים יותר לילדים גדולים. עין נוב לבד הוא הליכה קלה של כעשר דקות מהחניון. לא נכנסים לערוץ כשיש התראת שיטפונות.",
+    en: "Time is to the Black Waterfall parking. The stream has the Black Waterfall, the White Waterfall, and Ein Nov (Breichat HaMalka). It flows all year, and harder in winter. The full trail is long and suits older children better. Ein Nov alone is an easy walk of about ten minutes from the parking. Do not enter the channel when there is a flood warning.",
+    noteHe: "שער אבני איתן סגור בשבתות ובחגים, ומחנים מחוץ ליישוב. כדאי לוודא את מצב השער לפני שבת.",
+    noteEn: "The Avnei Eitan gate is closed on Shabbat and holidays, and people park outside the community. Recheck the gate before Shabbat."
   },
   {
     category: "מים",
@@ -113,8 +113,8 @@ window.PLACES = [
     minutes: 11,
     timeHe: "כ-11 דקות נסיעה (כ-11.7 ק״מ), בכביש 98",
     timeEn: "About 11 min drive (about 11.7 km), on Route 98",
-    he: "מעיין יפה לביקור משפחתי. הנסיעה מכאן בכביש 98.",
-    en: "A lovely spring for a family visit. The drive from here is on Route 98.",
+    he: "מעיין. הנסיעה מכאן בכביש 98.",
+    en: "A spring. The drive from here is on Route 98.",
     maps: "https://www.google.com/maps/search/?api=1&query=32.775199,35.701358"
   },
   {
@@ -125,8 +125,8 @@ window.PLACES = [
     minutes: 17,
     timeHe: "כ-17 דקות נסיעה (כ-13.8 ק״מ)",
     timeEn: "About 17 min drive (about 13.8 km)",
-    he: "עוד מעיין קרוב, ליום של מים.",
-    en: "Another spring nearby, for a day by the water.",
+    he: "מעיין.",
+    en: "A spring.",
     noteHe: "הדרך האחרונה לא מסומנת – קחו ניווט",
     noteEn: "The last stretch of the road is not marked. Take navigation.",
     maps: "https://www.google.com/maps/search/?api=1&query=32.7576433,35.745997"
@@ -137,8 +137,8 @@ window.PLACES = [
     name: "עין תאופיק",
     nameEn: "Ein Taufik",
     minutes: 21,
-    he: "ביער מבוא חמה: פלג רדוד לשכשוך רגליים, נוח לעגלות ולכיסאות גלגלים, עם חניון ונוף לכנרת.",
-    en: "In Mevo Hama forest: a shallow stream for paddling, easy with a stroller or a wheelchair, with parking and a view of the Kinneret."
+    he: "ביער מבוא חמה. פלג רדוד לשכשוך רגליים, נגיש לעגלות ולכיסאות גלגלים, עם חניון ונוף לכנרת.",
+    en: "In Mevo Hama forest. A shallow stream for paddling, accessible to strollers and wheelchairs, with parking and a view of the Kinneret."
   },
   {
     category: "מים",
@@ -156,8 +156,8 @@ window.PLACES = [
     name: "שמורת גמלא",
     nameEn: "Gamla reserve",
     minutes: 14,
-    he: "מפל של 51 מטר, ובחורף הזרימה חזקה יותר. שביל הנשרים סלול ונוח. ביום של סכנת שיטפונות נשארים מחוץ לשמורה.",
-    en: "A 51-meter waterfall, and in winter the flow is even stronger. The vulture trail is paved and easy. On a day with a flood risk, stay out of the reserve."
+    he: "מפל של 51 מטר, ובחורף הזרימה חזקה יותר. שביל הנשרים סלול ונגיש. לא יוצאים בימים של סכנת שיטפונות.",
+    en: "A 51-meter waterfall, stronger in winter. The vulture trail is paved and accessible. Do not go on days with a flood risk."
   },
   {
     category: "טיול",
@@ -166,8 +166,8 @@ window.PLACES = [
     nameEn: "Southern Golan promenade",
     timeHe: "יוצאים מהמושב",
     timeEn: "Starts from the moshav",
-    he: "טיילת סלולה של כ-30 ק״מ, נוחה לעגלות, בין היישובים בדרום הגולן, ועוברת גם בנוב.",
-    en: "About 30 km of paved promenade, easy with a stroller, between the southern Golan communities, passing through Nov too."
+    he: "טיילת סלולה של כ-30 ק״מ, נגישה לעגלות, ועוברת בין היישובים בדרום הגולן, כולל נוב.",
+    en: "About 30 km of paved promenade, accessible to strollers, passing the southern Golan communities, including Nov."
   },
   {
     category: "כנרת",
@@ -175,8 +175,8 @@ window.PLACES = [
     name: "כורסי",
     nameEn: "Kursi",
     minutes: 22,
-    he: "חוף כורסי וגן לאומי כורסי, על הכנרת. יום מים נעים וקרוב.",
-    en: "Kursi beach and Kursi National Park, on the Kinneret. An easy day by the water, close to home."
+    he: "חוף כורסי וגן לאומי כורסי, על הכנרת.",
+    en: "Kursi beach and Kursi National Park, on the Kinneret."
   },
   {
     category: "כנרת",
@@ -184,8 +184,8 @@ window.PLACES = [
     name: "עין גב",
     nameEn: "Ein Gev",
     minutes: 27,
-    he: "יישוב וחוף על הכנרת. יחד עם כורסי, זה בערך חצי שעה עד המים.",
-    en: "A community and a beach on the Kinneret. Together with Kursi, about half an hour to the water."
+    he: "יישוב וחוף על הכנרת. יחד עם כורסי, נוח לומר שזה בערך חצי שעה לכנרת.",
+    en: "A community and beach on the Kinneret. Together with Kursi, about half an hour to the Kinneret is a fair way to say it."
   },
   {
     category: "כנרת",
@@ -193,8 +193,8 @@ window.PLACES = [
     name: "טבריה",
     nameEn: "Tiberias",
     minutes: 50,
-    he: "עיר על הכנרת, כשבא לכם יום ארוך יותר מהחופים הקרובים לנוב.",
-    en: "A city on the Kinneret, when you want a longer day than the beaches closest to Nov."
+    he: "עיר על הכנרת, רחוקה יותר מהחופים הקרובים לנוב.",
+    en: "A city on the Kinneret, farther than the beaches closest to Nov."
   },
   {
     category: "משק",
@@ -203,8 +203,8 @@ window.PLACES = [
     nameEn: "Ben Zvi farm",
     timeHe: "בתוך המושב",
     timeEn: "In the moshav",
-    he: "דיר עיזים, ליטוף ומחלבה, כאן במושב. לפי אחד הפרסומים הסיור בתיאום וסגור בשבת. השעות והמחיר משתנים בין המקורות, אז שווה לשאול אותם ישירות.",
-    en: "A goat pen, petting and a dairy, right here in the moshav. One listing says visits are by arrangement and closed on Shabbat. Hours and price differ between sources, so it is worth asking them directly."
+    he: "דיר עיזים, ליטוף ומחלבה. לפי אחד הפרסומים הסיור בתיאום וסגור בשבת. שעות ומחיר סותרים בין מקורות, ולכן הם לא מפורטים כאן.",
+    en: "A goat pen, petting and a dairy. One listing says visits are by arrangement and closed on Shabbat. Hours and price disagree between sources, so they are not listed here."
   },
   {
     category: "משק",
@@ -213,8 +213,8 @@ window.PLACES = [
     nameEn: "Al HaSus",
     timeHe: "בתוך המושב",
     timeEn: "In the moshav",
-    he: "חוות רכיבה במושב. לפי פרסום: שיעורים מגיל 4 ורכיבה טיפולית. על פתיחה בחורף שווה לשאול במקום.",
-    en: "A riding stable in the moshav. A listing mentions lessons from age 4 and therapeutic riding. Worth asking the place about winter opening."
+    he: "חוות רכיבה בנוב. לפי פרסום: שיעורים מגיל 4 ורכיבה טיפולית. פתיחה בחורף לא אומתה כאן.",
+    en: "A riding stable in Nov. A listing mentions lessons from age 4 and therapeutic riding. Winter opening was not verified here."
   },
   {
     category: "משק",
@@ -223,8 +223,8 @@ window.PLACES = [
     nameEn: "Karmei Golan",
     timeHe: "בתוך המושב",
     timeEn: "In the moshav",
-    he: "שמן זית מהמושב. מסיק בנובמבר–דצמבר, ויש חנות שמחכה לכם.",
-    en: "Olive oil from the moshav. The harvest is in November and December, and a shop is waiting for you."
+    he: "שמן זית בנוב. מסיק בחודשים נובמבר–דצמבר, ויש חנות.",
+    en: "Olive oil in Nov. The harvest is in November and December, and there is a shop."
   },
   {
     category: "יין",
@@ -232,8 +232,8 @@ window.PLACES = [
     name: "יקבי רמת הגולן",
     nameEn: "Golan Heights Winery",
     minutes: 22,
-    he: "מרכז מבקרים בקצרין, לביקור משפחתי. כשר למהדרין וסגור בשבת. לפי הפרסום: בימים א׳–ה׳ 08:30–18:30, ובחורף ביום ו׳ עד 14:00.",
-    en: "A visitor center in Katzrin, for a family visit. Kosher lemehadrin, and closed on Shabbat. Published hours: Sunday to Thursday 08:30–18:30, and in winter Friday until 14:00."
+    he: "מרכז המבקרים בקצרין. כשר למהדרין וסגור בשבת. לפי הפרסום: בימים א׳–ה׳ 08:30–18:30, ובחורף ביום ו׳ עד 14:00.",
+    en: "Visitor center in Katzrin. Kosher lemehadrin, closed on Shabbat. Published hours: Sunday to Thursday 08:30–18:30, and in winter Friday until 14:00."
   },
   {
     category: "גשם",
@@ -241,10 +241,10 @@ window.PLACES = [
     name: "קצרין העתיקה",
     nameEn: "Ancient Katzrin",
     minutes: 22,
-    he: "יום גשם נעים: פארק ומזיאון מקורים ומחוממים. בבית הבד יש בחורף פעילות של מסיק והדלקת נרות שמן.",
-    en: "A pleasant rainy day: a covered, heated park and museum. In winter the oil press runs an olive-press and oil-lamp activity.",
-    noteHe: "הזמן כאן הוא עד יקבי רמת הגולן שבקצרין, והפארק העתיק באותה עיר.",
-    noteEn: "The time here is to the Golan Heights Winery in Katzrin, and the ancient park is in the same town."
+    he: "פארק ומזיאון מקורים ומחוממים, מתאים ליום גשם. בבית הבד יש בחורף פעילות של מסיק והדלקת נרות שמן.",
+    en: "A covered, heated park and museum, a good rainy-day visit. In winter the oil press runs an olive-press and oil-lamp activity.",
+    noteHe: "זמן הנסיעה נמדד ליקבי רמת הגולן שבקצרין. הפארק העתיק באותה עיר.",
+    noteEn: "The drive time was measured to the Golan Heights Winery in Katzrin. The ancient park is in the same town."
   },
   {
     category: "חורף",
@@ -252,8 +252,8 @@ window.PLACES = [
     name: "חמת גדר",
     nameEn: "Hamat Gader",
     minutes: 28,
-    he: "מעיינות חמים ליום חורף. המקום פתוח בשבת. על הכשרות שווה לשאול במקום לפני שמגיעים.",
-    en: "Hot springs for a winter day. The site is open on Shabbat. Worth asking the place about kashrut before you go.",
+    he: "מעיינות חמים. המקום פתוח בשבת. הכשרות לא אומתה כאן, ולכן לא כל משפחה שומרת כשרות תבחר בו.",
+    en: "Hot springs. The site is open on Shabbat. Kashrut was not verified here, so not every family that keeps kosher will choose it."
   },
   {
     category: "חורף",
@@ -262,7 +262,7 @@ window.PLACES = [
     nameEn: "Mount Hermon ski site",
     timeHe: "כשעה ו-10 דקות נסיעה",
     timeEn: "About 1 hr 10 min drive",
-    he: "יום שלג, כשהאתר פתוח. הגלישה תלויה במזג האוויר, אז שווה לבדוק לפני שיוצאים. בערב הג׳קוזי מחכה בבקתה.",
-    en: "A snow day, when the site is open. Skiing depends on the weather, so it is worth checking before you leave. In the evening the jacuzzi is waiting at the cabin.",
+    he: "ליום שלג. הגלישה תלויה במזג האוויר, וכדאי לבדוק שהאתר פתוח לפני שיוצאים. אחר כך חוזרים לג'קוזי בבקתה.",
+    en: "For a snow day. Skiing depends on the weather, and it is worth checking that the site is open before you leave. Afterwards, back to the cabin jacuzzi."
   }
 ];
