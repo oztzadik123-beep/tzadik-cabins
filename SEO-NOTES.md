@@ -58,7 +58,7 @@ LCP 2.8 s, CLS 0.053, TBT 0 ms. `styles.css` is no longer render-blocking. CLS m
 On-page tweaks will not by themselves rank a new GitHub Pages URL. In rough order:
 
 1. Google Business Profile for בקתות צדיק כתמר, with the real website URL, the Nov gate as the location you are willing to publish, photos, and the phone 050-460-6674. This is the listing Google shows for "צימר במושב נוב".
-2. Search Console on the live property. Paste the verification meta tag into the marked comment, then submit `https://oztzadik123-beep.github.io/tzadik-cabins/sitemap.xml`.
+2. Search Console on the live property. Paste the verification meta tag into the marked comment, then submit `https://tzadikcabins.co.il/sitemap.xml`.
 3. A real domain (for example a `.co.il`) pointed at the site. `github.io` is a shared host; a domain you control is what people and other sites will link to. Keep one canonical host and redirect the other.
 4. Links from sites that already rank for the Golan: the moshav, the regional council, Golan tourism pages, and any directory that already lists the cabins. A link from those pages is worth more than another keyword in the title.
 5. Reviews on the Business Profile from guests who stayed. Do not invent ratings on the site. There are no star counts in the structured data because none are published from a real source.
